@@ -59,7 +59,6 @@ cols.forEach((col, i) => {
             offset += additionalY.val;
             y = (parseFloat(y) + offset) % -Number(columnHeight * 0.5);
           }
-
           return y;
         })
       }
