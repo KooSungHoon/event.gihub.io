@@ -2,25 +2,33 @@ body {overflow: hidden;}
 img {width: 100%;}
 section {min-height: 790px;}
 audio {position: absolute; opacity: 0;}
+.vh100 {width: 100%; height: 100vh; background: #000;}
+
+/* mouse wheel */
+.mouse {overflow:hidden; position:absolute; left:50%; top:50%; width:24px; margin: -12px; height:50px; border:2px solid white; border-radius:30px; opacity:.3;}
+.mouse:after {display: block; content:""; position:absolute; left:13px; top:10px; width:4px; height:4px; margin-left: -3px; background-color:white; border-radius:2px; animation: mouse-wheel 2.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;}
+@keyframes mouse-wheel {
+  0% {transform: translateY(0); opacity: 0;}  
+  10% {transform: translateY(0); opacity: 1;}
+  30% {transform: translateY(0); height: 4px;}
+  50% {transform: translateY(0); height: 20px;}
+  70% {transform: translateY(15px); height: 4px; opacity: 1;}
+  90% {opacity: 0;}
+  100% {transform: translateY(15px); opacity: 0;}
+}
 
 /* 카톡 */
-.kakao {position: relative; width: 100%; height: 100vh; top: 0; left: 0; background: #BACEE0; z-index: 2; padding: 0 70px; box-sizing: border-box;}
-.chat > img {position: relative; width: 34vw; top: 75px; left: 50%; transform: translate(-50%);}
-.chat .msg_wrap {position: relative; display: flex; flex-direction: column; top: calc(75px + 75px); gap: 50px;}
+.kakao {position: absolute; width: 100%; height: 100vh; top: 0; left: 0; background: #BACEE0; z-index: 2; padding: 0 3.5vw; box-sizing: border-box;}
+.chat > img {position: relative; width: 34vw; top: 3.9vw; left: 50%; transform: translate(-50%);}
+.chat .msg_wrap {position: relative; display: flex; flex-direction: column; top: 8vw; gap: 40px;}
 .chat .msg {width: 53vw; opacity: 0; padding-top: 30px;}
 .chat .msg1 {margin: 0 auto auto 0; display: flex; align-items: flex-end; gap: 20px;}
 .chat .msg1 p {color: #FFEB33; font-size: 1.8vw;}
 .chat .msg2 {margin: auto 0 0 auto;}
 
 /* 영상 */
-#video_area {padding: 0; width: 100%; height: calc(100vh - 84px); margin-top: 84px; overflow: hidden; position: relative;}
-#background_video {z-index: -1; width: 100vw; position: absolute; top: -84px;}
-@media screen and (max-aspect-ratio: 1219/685) {
-    #background_video {
-        width: auto;
-        height: 100%;
-    }
-}
+video {position: fixed; left: 0; top: 0; min-width: 100%; min-height: 100vh; width: auto; height: auto; z-index: -100; background-size: cover;}
+
 /* section2 */
 .scroller {height: 100vh;}
 .section2 {position: relative;}
@@ -37,4 +45,33 @@ section.section2 .fixtext2 {display: flex; z-index: 9; align-items: center; marg
 .toRight img {max-width: 350px;}
 section .toLeft img {margin-right: 20px;}
 section .toRight img {margin-left: 20px;}
+
+.hormarq {padding: 10vw; height: 100vh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; overflow-y: hidden;}
+.gallery {z-index: 1; display: flex; flex-direction: row; justify-content: center; width: 100%; height: 100vh; position: fixed; top: 0; left: 50%; transform: translateX(-50%); overflow: hidden;}
+.col {display: flex; flex: 1; flex-direction: column; width: 100%; align-self: flex-start; justify-self: flex-start;}
+.col:nth-child(2) {align-self: flex-end; justify-self: flex-end;}
+.image {width: 100%; box-sizing: border-box; padding: 1rem;}
+.image:hover {z-index: 99999999999 !important; filter: saturate(1);}
+.hormarq img {transition: 0.3s ease-out; overflow: hidden; width: 100%; box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);}
+
+
+
+
+/* about us */
+.section4 {position: relative;}
+.section4 .sec4_text span {font-size: 300px; line-height: 1; font-weight: 400;}
+.section4 .sec4_text {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); display: flex; gap: 115px;}
+.section4 .history {position: absolute; top: 0%; left: 50%; transform: translate(-50%,-50%); display: flex; gap: 20px;}
+.section4 .history .history_box {width: 365px; height: 600px; border: 1px solid #000; background: #fff; text-align: center; font-weight: 700; padding: 20px; box-sizing: border-box; opacity: 0;}
+.section4 .history .history_title {position: relative; font-size: 16px; line-height: 18.4px; border-bottom: 1px solid #000; padding-bottom: 16px; margin-bottom: 100px;}
+.section4 .history .history_title::before, #section4 .history .history_title::after {content: ""; position: absolute; width: 10px; height: 10px; background: #000; border-radius: 50%; top: 3px;}
+.section4 .history .history_title::before {left: 0;}
+.section4 .history .history_title::after {right: 0;}
+.section4 .history .history_text_01 {font-size: 180px; line-height: 206.98px;}
+.section4 .history .history_text_02 {font-size: 24px; line-height: 27.6px; }
+.section4 .history .history_text_03 {font-size: 16px; line-height: 20px; font-weight: 400; color: #666; border-top: 1px solid #000; padding-top: 10px; margin-top: 30px;}
+
 
