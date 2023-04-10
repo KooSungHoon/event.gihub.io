@@ -1,3 +1,6 @@
+var audio = new Audio('etc/LoveBlossom.mp3');
+audio.play();
+
 gsap.registerPlugin(ScrollTrigger);
 // Setup smooth scroll
 const scroller = document.querySelector('.scroller');
