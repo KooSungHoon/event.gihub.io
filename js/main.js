@@ -98,12 +98,10 @@ const sec2 = gsap.timeline({
         end: "+=3000"         
     }
 });
-sec2.to(".text_about", {yPercent: -70, duration: 5}, "a");
-sec2.to(".text_us", {yPercent: 70, duration: 5}, "a");
-sec2.to(".box_01",{yPercent: 80, opacity:1, duration: 4});
-sec2.to(".box_02",{yPercent: 80, opacity:1, duration: 4});
-sec2.to(".box_03",{yPercent: 80, opacity:1, duration: 4});
-sec2.to(".box_04",{yPercent: 80, opacity:1, duration: 4});
+sec2.to(".text_about", {yPercent: -300, duration: 5}, "a");
+sec2.to(".text_us", {yPercent: 300, duration: 5}, "a");
+sec2.to(".box_01",{opacity:1, duration: 4});
+sec2.to(".t1",{opacity: 1, duration: 4});
 
 if (document.querySelector('.gsap-marker-scroller-start')) {		
     const markers = gsap.utils.toArray('[class *= "gsap-marker"]');	
