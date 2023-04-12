@@ -1,5 +1,5 @@
-var audio = new Audio('etc/LoveBlossom.mp3');
-audio.play();
+// var audio = new Audio('etc/LoveBlossom.mp3');
+// audio.play();
 
 gsap.registerPlugin(ScrollTrigger);
 // Setup smooth scroll
@@ -95,13 +95,31 @@ const sec2 = gsap.timeline({
         pin: true,
         start: "top top",
         markers:true,
-        end: "+=3000"         
+        end: "+=11520"         
     }
 });
-sec2.to(".text_about", {yPercent: -300, duration: 5}, "a");
-sec2.to(".text_us", {yPercent: 300, duration: 5}, "a");
+sec2.to(".text_about", {yPercent: -250, duration: 5}, "a");
+sec2.to(".text_us", {yPercent: 250, duration: 5}, "a");
 sec2.to(".box_01",{opacity:1, duration: 4});
-sec2.to(".t1",{opacity: 1, duration: 4});
+sec2.to(".t1",{opacity: 1, duration: 8});
+sec2.to(".history_box img",{opacity: 0, duration: 8});
+sec2.to(".t2",{opacity: 1, duration: 8});
+sec2.to(".history_box img",{opacity: 0, duration: 8});
+sec2.to(".t3",{opacity: 1, duration: 8});
+sec2.to(".history_box img",{opacity: 0, duration: 8});
+sec2.to(".t4",{opacity: 1, duration: 8});
+
+const sec2_2 = gsap.timeline({
+  scrollTrigger: { 
+      trigger : ".section4",
+      scrub: true,
+      // pin: true,
+      start: "top top",
+      markers:true,
+      end: "+=11520"         
+  }
+});
+sec2_2.to(".section4", {'background-position': '0 -11544', duration: 5});
 
 if (document.querySelector('.gsap-marker-scroller-start')) {		
     const markers = gsap.utils.toArray('[class *= "gsap-marker"]');	
