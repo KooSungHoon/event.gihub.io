@@ -98,6 +98,7 @@ const imagesScrollerTrigger = ScrollTrigger.create({
   });
   sec2.to(".text_about", {yPercent: -250, duration: 5}, "a");
   sec2.to(".text_us", {yPercent: 250, duration: 5}, "a");
+  sec2.to(".sec4_text", {'filter': 'invert(0)'});
   sec2.to(".box_01",{opacity:1, duration: 4});
   sec2.to(".t1",{opacity: 1, duration: 8});
   sec2.to(".history_box img",{opacity: 0, duration: 8});
@@ -106,6 +107,7 @@ const imagesScrollerTrigger = ScrollTrigger.create({
   sec2.to(".t3",{opacity: 1, duration: 8});
   sec2.to(".history_box img",{opacity: 0, duration: 8});
   sec2.to(".t4",{opacity: 1, duration: 8});
+  
 
   const sec2_2 = gsap.timeline({
   scrollTrigger: { 
@@ -118,7 +120,7 @@ const imagesScrollerTrigger = ScrollTrigger.create({
   }
   });
   sec2_2.to(".section4", {'background-position': '0 -11544', duration: 5});
-
+  
 
 }
 
