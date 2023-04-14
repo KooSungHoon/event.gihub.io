@@ -107,6 +107,8 @@ const imagesScrollerTrigger = ScrollTrigger.create({
   sec2.to(".t3",{opacity: 1, duration: 8});
   sec2.to(".history_box img",{opacity: 0, duration: 8});
   sec2.to(".t4",{opacity: 1, duration: 8});
+  sec2.to(".history_box img",{opacity: 0, duration: 8});
+  sec2.to(".t5",{opacity: 1, duration: 8});
   
 
   const sec2_2 = gsap.timeline({
@@ -122,13 +124,31 @@ const imagesScrollerTrigger = ScrollTrigger.create({
   sec2_2.to(".section4", {'background-position': '0 -11544', duration: 5});
   
 
+
+  // 스사
+  const sec3 = gsap.timeline({
+    scrollTrigger: { 
+        trigger : ".section5",
+        scrub: true,
+        pin: true,
+        start: "top top",
+        // markers:true,
+        end: "+=3000"         
+    }
+  });
+  sec3.to(".section5 .cut", {width: '100%', duration: 5});
+  sec3.to(".section5 .cut", {opacity: '0', duration: 5}, "b");
+  sec3.to(".section5 .c1", {top: '-100%', duration: 5}, "b");
+  sec3.to(".section5 .c2", {bottom: '-100%', duration: 5}, "b");
+  sec3.to(".section5 .btns", {opacity: '1', duration: 5});
+  
 }
 
 
 gsap.registerPlugin(ScrollTrigger);
 // Setup smooth scroll
 const scroller = document.querySelector('.scroller');
-const bodyScrollBar = Scrollbar.init(scroller, {damping: 0.07, delegateTo: document, alwaysShowTracks: false });
+const bodyScrollBar = Scrollbar.init(scroller, {damping: 0.05, delegateTo: document, alwaysShowTracks: false });
 ScrollTrigger.scrollerProxy(".scroller", {
 scrollTop(value) {
     if (arguments.length) {
