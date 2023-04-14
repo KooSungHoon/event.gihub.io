@@ -113,18 +113,19 @@
             
           </div>
           <div class="btns">
-            <a>YES?</a>
+            <a onclick="yes()">YES?</a>
             <a onclick="$('body').remove();">NO?</a>
           </div>
           <div class="cut"></div>
         </section>
 
+        
+
         <!-- video -->
-        <div>
-            <div id="video_area">
-                <!-- <video src="/images/movie.mp4" id="background_video" preload="auto" muted="muted" volume="0"></video> -->
-            </div>
-        </div>
+        <video id="video1" width="100%" autoplay muted loop>
+          <source src="etc/making.mp4" type="video/mp4">
+        </video>
+
     </div>
     <script src="js/main.js"></script>
 </body>

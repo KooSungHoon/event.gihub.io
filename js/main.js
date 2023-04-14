@@ -142,6 +142,20 @@ const imagesScrollerTrigger = ScrollTrigger.create({
   sec3.to(".section5 .c2", {bottom: '-100%', duration: 5}, "b");
   sec3.to(".section5 .btns", {opacity: '1', duration: 5});
   
+
+  // 룰렛
+  const sec4 = gsap.timeline({
+    scrollTrigger: { 
+        trigger : ".luck",
+        scrub: true,
+        pin: true,
+        start: "top top",
+        // markers:true,
+        end: "+=3000"         
+    }
+  });
+  sec4.to(".luck", {background: '#000', duration: 5});
+
 }
 
 
@@ -163,4 +177,7 @@ ScrollTrigger.defaults({ scroller: scroller });
 
 
 
-
+function yes() {
+  $('.btns').hide();
+  $('.section5').css({'background': "url('../images/bag.png')", 'background-position': 'center'})
+}
