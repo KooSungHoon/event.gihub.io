@@ -109,7 +109,6 @@ const imagesScrollerTrigger = ScrollTrigger.create({
   sec2.to(".t4",{opacity: 1, duration: 8});
   sec2.to(".history_box img",{opacity: 0, duration: 8});
   sec2.to(".t5",{opacity: 1, duration: 8});
-  
 
   const sec2_2 = gsap.timeline({
   scrollTrigger: { 
@@ -179,5 +178,5 @@ ScrollTrigger.defaults({ scroller: scroller });
 
 function yes() {
   $('.btns').hide();
-  $('.section5').css({'background': "url('../images/bag.png')", 'background-position': 'center'})
+  $('.section5').addClass('yes');
 }
