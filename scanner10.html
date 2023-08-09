@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta name="format-detection" content="telephone=no,email=no,address=no" />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="shortcut icon" type="image/x-icon" href="" />
+<link type="image/x-icon" rel="apple-touch-icon-precomposed" href="" />
+<title>wp 한국서부발전(주)</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/style_new.css" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.7/html5-qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+</head>
+<body>
+
+<style>
+body {overflow: hidden;}
+	.scanner_title {width: 100%; position: absolute; top: 120px; left: 50%; transform: translateX(-50%); text-align: center; z-index: 9; color: #fff; font-weight: bold; z-index: 9;}
+	.scanner_title h1 {font-size: 24px;}
+	.scanner_title h2 {font-size: 16px; font-weight: normal; margin-top: 10px;}
+	.exit {position: absolute; top: 40px; right: 17px; display: inline-block; width: 30px; height: 30px; z-index: 9;}
+
+
+	.scanner-content {
+	  position: relative;
+	  margin-top: 0;
+	  max-width: 100vw;
+	  margin: 0 auto;
+	}
+	
+	.scanner-content .qr-preview > div:not(.scanner_title) {
+	  width: 100vw;
+	  /*height: 100vh;*/
+	  margin: auto;
+	  position: relative;
+	  overflow: hidden;
+	  /*transform: scale(3);*/
+	  overflow: hidden;
+	}
+	
+	.scanner-content .qr-preview video {
+	  /*height: 100%;*/
+	  -o-object-fit: cover;
+	     object-fit: cover;
+	  width: 100vw;
+	  margin: 0 auto;
+	}
+	
+	.scanner-content .qr-preview:after {
+	  content: '';
+	  background-image: url("../img/m_office/qr_focus.svg");
+	  position: absolute;
+	  left: 0;
+	  top: 50%;
+	  width: 100%;
+	  height: 100%;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  z-index: 9;
+	}
+	.scanner-content .qr-preview.on:after {
+	  background-image: url("../img/m_office/qr_focus_on.svg");
+	}
+	
+
+	#toast {position: fixed; top: 32px; right: 32px; z-index: 999999;}
+	.toast {display: flex; align-items: center; background-color: #2A71DB;; border-radius: 10px; padding: 20px 20px; box-sizing: border-box; width: calc(100vw - 80px); margin: 0 auto; box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08); transition: all linear 0.3s;}
+	@keyframes slideInLeft {
+	  from {
+	    opacity: 0;
+	    transform: translateX(calc(100vw));
+	  }
+	  to {
+	    opacity: 1;
+	    transform: translateX(0);
+	  }
+	}
+	@keyframes fadeOut {
+	  to {
+	    opacity: 0;
+	  }
+	}
+	.toast__title {font-size: 16px; color: #fff;}
+	.toast__msg {font-size: 14px; margin-top: 10px; color: #fff;}
+</style>
+
+<div class="scanner-content">
+  <div class="qr-preview">
+  	<div class="scanner_title">
+		<h1>감사실 6층</h1>
+		<h2>QR코드 스캔 후 점검을 진행해주세요</h2>
+	</div>
+    <div id="reader"></div>
+  </div>
+</div>
+	
+<script>
+	var count = 1;
+	function showSuccessToast(id) {
+		if(count === 1) {
+			toast({
+			    title: "인식 성공",
+			    message: "점검 장소 아이디 : " + id,
+			    type: "success",
+			    duration: 5000
+			  });
+			count ++;
+		} else {
+			return;
+		}
+	  
+	}
+	
+	function toast({ title = "", message = "", type = "", duration = 3000 }) {
+	  const wrapper = document.getElementById("toast");
+	  if (wrapper) {
+	    const toast = document.createElement("div");
+	    toast.className = `toast toast--${type}`;
+	    wrapper.appendChild(toast);
+
+	    const fadeOutSeconds = 1000;
+	    const removeToast = setTimeout(function () {
+	      wrapper.removeChild(toast);
+	    }, duration + fadeOutSeconds);
+
+	    toast.addEventListener("click", function (event) {
+	      if (event.target.closest(".toast__close")) {
+	        wrapper.removeChild(toast);
+	        clearTimeout(removeToast);
+	      }
+	    });
+
+	    const seconds = (duration / 1000).toFixed(2);
+	    const listIcon = {
+	      success: "fas fa-check-circle"
+	    };
+	    const icon = listIcon[type];
+
+	    toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${seconds}s forwards`;
+
+	    toast.innerHTML = `<div class="toast__icon">
+	            <i class="${icon}"></i>
+	        </div>
+	        <div class="toast__body">
+	            <h3 class="toast__title">${title}</h3>
+	            <p class="toast__msg">${message}</p>
+	        </div>
+	        <div class="toast__close">
+	            <i class="fas fa-times"></i>
+	        </div>`;
+	  }
+	}
+
+	
+	
+	
+	
+  
+	function qrFound(qrCode){
+		  $('.scanner-content .qr-preview').addClass('on');
+		  alert(qrCode);
+		}
+
+		const html5QrCode = new Html5Qrcode("reader");
+
+		html5QrCode.start({facingMode: "environment"},{fps: 10 },qrFound)
+		  .catch(err => {
+		  console.log(err);
+		});
+</script>
+</body>
+</html>
