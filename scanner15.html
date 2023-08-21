@@ -14,8 +14,8 @@
 <script type="text/javascript" src="../js/script.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>
 <script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
-<!-- <script type="text/javascript" src="../js/qr.js"></script> -->
-<script type="text/javascript" src="../event.gihub.io/qr.js"></script> 
+<!--<script type="text/javascript" src="../js/qr.js"></script> 
+<script type="text/javascript" src="../event.gihub.io/qr.js"></script> -->
 </head>
 <body>
 
@@ -47,7 +47,7 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 <a class="exit"><img style="width: 100%;" src="../img/m_office/close_white.svg"></a>
 <div class="tit_wrap">
 
-<input type="file">
+<input type=“file” id=“camera” name=“camera” capture=“camera” accept=“image/*” />
 
 	<div class="scanner_title">
 		<h1>감사실 6층</h1>
@@ -77,7 +77,7 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 	</div>
 </div>
 <script>
-	const constraints = { video: true };
+	/*const constraints = { video: true };
 
 	navigator.mediaDevices.getUserMedia(constraints)
 	  .then((stream) => {
@@ -101,7 +101,7 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 	  })
 	  .catch((error) => {
 	    console.error('error....', error);
-	  });
+	  });*/
 </script>
 </body>
 </html>
