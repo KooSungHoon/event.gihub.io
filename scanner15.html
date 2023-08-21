@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../js/script.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>
 <script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.7/html5-qrcode.min.js"></script>
+<script src="../js/qr.js"></script>
 </head>
 <body>
 
@@ -27,27 +27,20 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 .exit {position: absolute; width: 100%; top: 40px; right: 17px; display: inline-block; width: 30px; height: 30px; z-index: 9;}
 .scanner-content {position: relative; max-width: 77.7vw; margin: 0 auto;}
 .scanner-content .qr-preview > div:not(.tit_wrap) {width: 77.7vw; height: 77.7vw; border-radius: 20px; margin: auto; position: relative; overflow: hidden;}
+.scanner-content .qr-preview > div:not(.tit_wrap):after {position: absolute; content: ''; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px; box-shadow: inset 0 0 0 4px #2A71Db;}
 .scanner-content .qr-preview video {height: 100%; -o-object-fit: cover; object-fit: cover; width: 100%;}
-#toast {position: fixed; bottom: 50px; right: 32px; z-index: 999999;}
-.toast {display: flex; align-items: center; background-color: #2A71DB;; border-radius: 10px; padding: 20px 20px; box-sizing: border-box; width: calc(100vw - 80px); margin: 0 auto; box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08); transition: all linear 0.3s;}
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(calc(100vw));
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+#toast {position: fixed; bottom: 50px; left: 100%; z-index: 999999; transition: all linear 0.3s;}
+#toast.show{left: 0; animation: fadeOut 3s; animation-fill-mode: forwards; animation-delay: 2s;}
+.toast {display: flex; align-items: center; justify-content: center; background-color: #2A71DB;; border-radius: 10px; padding: 20px 20px; box-sizing: border-box; width: calc(100vw - 20vw); margin: 0 10vw; box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08); transition: all linear 0.3s;}
+
 @keyframes fadeOut {
   to {
     opacity: 0;
   }
 }
-.toast__title {font-size: 16px; color: #fff;}
+.toast__title {font-size: 16px; color: #fff; margin: 0 auto;}
 .toast__msg {font-size: 14px; margin-top: 10px; color: #fff;}
-
+.toast.toast--success {animation: 0.3s ease 0s 1 normal none running slideInLeft, 1s linear 5000s 1 normal forwards running fadeOut;}
 </style>
 
 <a class="exit"><img style="width: 100%;" src="../img/m_office/close_white.svg"></a>
@@ -59,75 +52,32 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 </div>
   	
 <div class="scanner-content">
-  <div class="qr-preview">
-    <div id="reader"></div>
-  </div>
+	<div class="qr-preview">
+	  <div id="reader"></div>
+	</div>
 </div>
-<div id="toast"></div>
+<div id="toast">
+	<div class="toast"> <!--  toast--success  -->
+		<div class="toast__icon">
+			<i class="fas fa-check-circle"></i>
+		</div>
+		<div class="toast__body">
+		    <h3 class="toast__title">점검장소 확인이 완료되었습니다.</h3>
+		</div>
+		<div class="toast__close">
+		    <i class="fas fa-times"></i>
+		</div>
+	</div>
+</div>
 <script>
-	var count = 1;
-	function showSuccessToast(id) {
+	var count = 1;	
+	function qrFound(qrCode){
 		if(count === 1) {
-			toast({
-			    title: "인식 성공",
-			    message: "점검 장소 아이디 : " + id,
-			    type: "success",
-			    duration: 5000
-			  });
+			$('#toast').addClass('show');
 			count ++;
 		} else {
 			return;
 		}
-	  
-	}
-	
-	function toast({ title = "", message = "", type = "", duration = 3000 }) {
-	  const wrapper = document.getElementById("toast");
-	  if (wrapper) {
-	    const toast = document.createElement("div");
-	    toast.className = `toast toast--${type}`;
-	    wrapper.appendChild(toast);
-
-	    const fadeOutSeconds = 1000;
-	    const removeToast = setTimeout(function () {
-	      wrapper.removeChild(toast);
-	    }, duration + fadeOutSeconds);
-
-	    toast.addEventListener("click", function (event) {
-	      if (event.target.closest(".toast__close")) {
-	        wrapper.removeChild(toast);
-	        clearTimeout(removeToast);
-	      }
-	    });
-
-	    const seconds = (duration / 1000).toFixed(2);
-	    const listIcon = {
-	      success: "fas fa-check-circle"
-	    };
-	    const icon = listIcon[type];
-
-	    toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${seconds}s forwards`;
-
-	    toast.innerHTML = `<div class="toast__icon">
-	            <i class="${icon}"></i>
-	        </div>
-	        <div class="toast__body">
-	            <h3 class="toast__title">${title}</h3>
-	            <p class="toast__msg">${message}</p>
-	        </div>
-	        <div class="toast__close">
-	            <i class="fas fa-times"></i>
-	        </div>`;
-	  }
-	}
-
-	
-	
-	
-	
-  
-	function qrFound(qrCode){
-		showSuccessToast(qrCode);
 	}
 
 	const html5QrCode = new Html5Qrcode("reader");
