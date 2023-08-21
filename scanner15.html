@@ -14,8 +14,8 @@
 <script type="text/javascript" src="../js/script.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>
 <script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
-<!-- <script type="text/javascript" src="../js/jsqr.js"></script>-->
-<script type="text/javascript" src="../event.gihub.io/jsqr.js"></script>
+<!--<script type="text/javascript" src="../js/qr.js"></script> 
+<script type="text/javascript" src="../event.gihub.io/qr.js"></script> -->
 </head>
 <body>
 
@@ -42,16 +42,25 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 .toast__title {font-size: 16px; color: #fff; margin: 0 auto;}
 .toast__msg {font-size: 14px; margin-top: 10px; color: #fff;}
 .toast.toast--success {animation: 0.3s ease 0s 1 normal none running slideInLeft, 1s linear 5000s 1 normal forwards running fadeOut;}
-#outputMessage {color: #fff;}
 </style>
 
-  <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
-  <canvas id="canvas" hidden></canvas>
-  <div id="output" hidden>
-    <div id="outputMessage">No QR code detected.</div>
-    <div hidden><b>Data:</b> <span id="outputData"></span></div>
-  </div>
+<!-- <a class="exit"><img style="width: 100%;" src="../img/m_office/close_white.svg"></a>
+<div class="tit_wrap">
 
+	<div class="scanner_title">
+		<h1>감사실 6층</h1>
+		<h2>QR코드 스캔 후 점검을 진행해주세요</h2>
+	</div>
+</div>
+  	
+<div class="scanner-content">
+	<div class="qr-preview">
+	  <div id="reader"></div>
+	</div>
+</div>-->
+<video id="video" width="640" height="480" autoplay></video>
+<button id="snap">Snap Photo</button>
+<canvas id="canvas" width="640" height="480"></canvas>
 
 
 <div id="toast">
@@ -68,60 +77,37 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 	</div>
 </div>
 <script>
-var video = document.createElement("video");
-var canvasElement = document.getElementById("canvas");
-var canvas = canvasElement.getContext("2d");
-var loadingMessage = document.getElementById("loadingMessage");
-var outputContainer = document.getElementById("output");
-var outputMessage = document.getElementById("outputMessage");
-var outputData = document.getElementById("outputData");
+//Grab elements, create settings, etc.
+var video = document.getElementById('video');
 
-function drawLine(begin, end, color) {
-  canvas.beginPath();
-  canvas.moveTo(begin.x, begin.y);
-  canvas.lineTo(end.x, end.y);
-  canvas.lineWidth = 4;
-  canvas.strokeStyle = color;
-  canvas.stroke();
-}
-
-// Use facingMode: environment to attemt to get the front camera on phones
-navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function(stream) {
-  video.srcObject = stream;
-  video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
-  video.play();
-  requestAnimationFrame(tick);
-});
-
-function tick() {
-  loadingMessage.innerText = "⌛ Loading video..."
-  if (video.readyState === video.HAVE_ENOUGH_DATA) {
-    loadingMessage.hidden = true;
-    canvasElement.hidden = false;
-    outputContainer.hidden = false;
-
-    canvasElement.height = video.videoHeight;
-    canvasElement.width = video.videoWidth;
-    canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
-    var imageData = canvas.getImageData(0, 0, canvasElement.width, canvasElement.height);
-    var code = jsQR(imageData.data, imageData.width, imageData.height, {
-      inversionAttempts: "dontInvert",
+// Get access to the camera!
+if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // Not adding `{ audio: true }` since we only want video now
+    navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+        //video.src = window.URL.createObjectURL(stream);
+        video.srcObject = stream;
+        video.play();
     });
-    if (code) {
-      drawLine(code.location.topLeftCorner, code.location.topRightCorner, "#FF3B58");
-      drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#FF3B58");
-      drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#FF3B58");
-      drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#FF3B58");
-      outputMessage.hidden = true;
-      outputData.parentElement.hidden = false;
-      outputData.innerText = code.data;
-    } else {
-      outputMessage.hidden = false;
-      outputData.parentElement.hidden = true;
-    }
-  }
-  requestAnimationFrame(tick);
 }
+
+/* Legacy code below: getUserMedia 
+else if(navigator.getUserMedia) { // Standard
+    navigator.getUserMedia({ video: true }, function(stream) {
+        video.src = stream;
+        video.play();
+    }, errBack);
+} else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
+    navigator.webkitGetUserMedia({ video: true }, function(stream){
+        video.src = window.webkitURL.createObjectURL(stream);
+        video.play();
+    }, errBack);
+} else if(navigator.mozGetUserMedia) { // Mozilla-prefixed
+    navigator.mozGetUserMedia({ video: true }, function(stream){
+        video.srcObject = stream;
+        video.play();
+    }, errBack);
+}
+*/
 </script>
 </body>
 </html>
