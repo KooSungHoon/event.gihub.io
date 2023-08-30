@@ -93,10 +93,11 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 
 	const html5QrCode = new Html5Qrcode("reader");
 
-	html5QrCode.start({facingMode: "user"},{fps: 10 },qrFound)
+	html5QrCode.start({facingMode: "environment"},{fps: 10 },qrFound, alert(html5QrCode.getCameras))
 	  .catch(err => {
 	  console.log(err);
 	});
+	
 
 	// html5QrCode.getCameras().then(cameras => {
 	// // assuming at least one camera exists 
