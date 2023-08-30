@@ -14,8 +14,8 @@
 <script type="text/javascript" src="../js/script.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>
 <script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
-<!--<script type="text/javascript" src="../js/qr.js"></script> 
-<script type="text/javascript" src="../event.gihub.io/qr.js"></script> -->
+<!-- <script src="../js/qr.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.7/html5-qrcode.min.js"></script>
 </head>
 <body>
 
@@ -42,11 +42,12 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 .toast__title {font-size: 16px; color: #fff; margin: 0 auto;}
 .toast__msg {font-size: 14px; margin-top: 10px; color: #fff;}
 .toast.toast--success {animation: 0.3s ease 0s 1 normal none running slideInLeft, 1s linear 5000s 1 normal forwards running fadeOut;}
+
+#reader video {zoom: 2;}
 </style>
 
-<!-- <a class="exit"><img style="width: 100%;" src="../img/m_office/close_white.svg"></a>
+<a class="exit"><img style="width: 100%;" src="../img/m_office/close_white.svg"></a>
 <div class="tit_wrap">
-
 	<div class="scanner_title">
 		<h1>감사실 6층</h1>
 		<h2>QR코드 스캔 후 점검을 진행해주세요</h2>
@@ -57,12 +58,7 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 	<div class="qr-preview">
 	  <div id="reader"></div>
 	</div>
-</div>-->
-<video id="video" width="640" height="480" autoplay></video>
-<button id="snap">Snap Photo</button>
-<canvas id="canvas" width="640" height="480"></canvas>
-
-
+</div>
 <div id="toast">
 	<div class="toast"> <!--  toast--success  -->
 		<div class="toast__icon">
@@ -77,37 +73,22 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 	</div>
 </div>
 <script>
-//Grab elements, create settings, etc.
-var video = document.getElementById('video');
+	var count = 1;	
+	function qrFound(qrCode){
+		if(count === 1) {
+			$('#toast').addClass('show');
+			count ++;
+		} else {
+			return;
+		}
+	}
 
-// Get access to the camera!
-if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-    // Not adding `{ audio: true }` since we only want video now
-    navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
-        //video.src = window.URL.createObjectURL(stream);
-        video.srcObject = stream;
-        video.play();
-    });
-}
+	const html5QrCode = new Html5Qrcode("reader");
 
-/* Legacy code below: getUserMedia 
-else if(navigator.getUserMedia) { // Standard
-    navigator.getUserMedia({ video: true }, function(stream) {
-        video.src = stream;
-        video.play();
-    }, errBack);
-} else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
-    navigator.webkitGetUserMedia({ video: true }, function(stream){
-        video.src = window.webkitURL.createObjectURL(stream);
-        video.play();
-    }, errBack);
-} else if(navigator.mozGetUserMedia) { // Mozilla-prefixed
-    navigator.mozGetUserMedia({ video: true }, function(stream){
-        video.srcObject = stream;
-        video.play();
-    }, errBack);
-}
-*/
+	html5QrCode.start({facingMode: "environment"},{fps: 10 },qrFound)
+	  .catch(err => {
+	  console.log(err);
+	});
 </script>
 </body>
 </html>
