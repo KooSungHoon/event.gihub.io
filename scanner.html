@@ -14,7 +14,8 @@
 <script type="text/javascript" src="../js/script.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>
 <script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
-<script src="../event.gihub.io/qr.js"></script>
+<!-- <script src="../js/qr.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.7/html5-qrcode.min.js"></script>
 </head>
 <body>
 
@@ -41,6 +42,8 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 .toast__title {font-size: 16px; color: #fff; margin: 0 auto;}
 .toast__msg {font-size: 14px; margin-top: 10px; color: #fff;}
 .toast.toast--success {animation: 0.3s ease 0s 1 normal none running slideInLeft, 1s linear 5000s 1 normal forwards running fadeOut;}
+
+#reader video {}
 </style>
 
 <a class="exit"><img style="width: 100%;" src="../img/m_office/close_white.svg"></a>
@@ -80,26 +83,12 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 		}
 	}
 
-	
-	const constraints = { video: true };
+	const html5QrCode = new Html5Qrcode("reader");
 
-	navigator.mediaDevices.getUserMedia(constraints)
-	  .then((stream) => {
-	    // 여기서 qr관련 처리
-	    const html5QrCode = new Html5Qrcode("reader");
-
-		html5QrCode.start({facingMode: "environment"},{fps: 10 },qrFound)
-		  .catch(err => {
-		  console.log(err);
-		});
-	    
-	    
-	  })
-	  .catch((error) => {
-	    
-	    console.error('error....', error);
-	  });
-	
+	html5QrCode.start({facingMode: "environment"},{fps: 10 },qrFound)
+	  .catch(err => {
+	  console.log(err);
+	});
 </script>
 </body>
 </html>
