@@ -27,7 +27,7 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 .scanner_title h2 {font-size: 16px; font-weight: normal; margin: 10px 0 0 0;}
 .exit {position: absolute; width: 100%; top: 40px; right: 17px; display: inline-block; width: 30px; height: 30px; z-index: 9;}
 .scanner-content {position: relative; max-width: 77.7vw; margin: 0 auto;}
-.scanner-content .qr-preview > div:not(.tit_wrap) {width: 77.7vw; height: 77.7vw; border-radius: 20px; margin: auto; position: relative; overflow: hidden;}
+/*.scanner-content .qr-preview > div:not(.tit_wrap) {width: 77.7vw; height: 77.7vw; border-radius: 20px; margin: auto; position: relative; overflow: hidden;}*/
 /*.scanner-content .qr-preview > div:not(.tit_wrap):after {position: absolute; content: ''; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px; box-shadow: inset 0 0 0 4px #2A71Db;}*/
 .scanner-content .qr-preview video {height: 100%; -o-object-fit: cover; object-fit: cover; width: 100%;}
 #toast {position: fixed; bottom: 50px; left: 100%; z-index: 999999; transition: all linear 0.3s;}
@@ -47,6 +47,8 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 #reader img {display: none;}
 #qr-shaded-region > div {display: none;}
 #reader__scan_region:after {position: absolute; content: ''; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px; box-shadow: inset 0 0 0 4px #2A71Db;}
+#reader__scan_region {width: 77.7vw; height: 77.7vw; border-radius: 20px; margin: auto; position: relative; overflow: hidden;}
+#reader__dashboard span {color: #fff;}
 </style>
 
 <a class="exit"><img style="width: 100%;" src="../img/m_office/close_white.svg"></a>
