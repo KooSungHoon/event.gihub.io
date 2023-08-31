@@ -91,7 +91,7 @@ function qrFound(qrCode){
 	}
 }
 
-var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
+/*var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
     let minEdgePercentage = 0.60; // 60%
     let minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
     let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
@@ -99,11 +99,11 @@ var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
         width: qrboxSize,
         height: qrboxSize
     };
-}
+}*/
 
 const html5QrCode = new Html5Qrcode("reader");
 reader.style.width = "600px";
-html5QrCode.start({facingMode: "environment"},{fps: 10, qrbox: qrboxFunction} ,qrFound)
+html5QrCode.start({facingMode: "environment"},{fps: 10, qrbox: 310} ,qrFound)
   .catch(err => {
   console.log(err);
 });
