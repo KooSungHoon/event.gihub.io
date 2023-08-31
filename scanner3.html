@@ -33,7 +33,6 @@ body {margin: 0; overflow: hidden;}
 #reader:after {content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 20px; background: #333;}
 #qr-shaded-region {border-color: #333 !important;}
 #qr-shaded-region:after {position: absolute; content: ''; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px; box-shadow: inset 0 0 0 4px #2A71Db, 0 0 0 20px #333;}
-
 #qr-shaded-region > div {display: none;}
 #toast {position: fixed; bottom: 50px; left: 100%; z-index: 999999; transition: all linear 0.3s;}
 #toast.show{left: 0; animation: fadeOut 3s; animation-fill-mode: forwards; animation-delay: 2s;}
@@ -91,19 +90,31 @@ function qrFound(qrCode){
 	}
 }
 
-/*var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
-    let minEdgePercentage = 0.60; // 60%
-    let minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
-    let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
+var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
+    var minEdgePercentage = 0.60; // 60%
+    var minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
+    var qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
+    console.log(qrboxSize)
+    if(screen.width <= 400) {
+    	qrboxSize = 280;
+    } else if((screen.width <= 650)) {
+    	qrboxSize = 310;
+    } else if((screen.width <= 1080)) {
+    	qrboxSize = 330;
+    } else {
+    	qrboxSize = 280;
+    }
+    console.log(qrboxSize)
     return {
         width: qrboxSize,
         height: qrboxSize
     };
-}*/
+
+}
 
 const html5QrCode = new Html5Qrcode("reader");
 reader.style.width = "600px";
-html5QrCode.start({facingMode: "environment"},{fps: 10, qrbox: 310} ,qrFound)
+html5QrCode.start({facingMode: "environment"},{fps: 10, qrbox: qrboxFunction} ,qrFound)
   .catch(err => {
   console.log(err);
 });
