@@ -92,7 +92,7 @@ function qrFound(qrCode){
 }
 
 var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
-    let minEdgePercentage = 0.45; // 45%
+    let minEdgePercentage = 0.50; // 50%
     let minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
     let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
     return {
