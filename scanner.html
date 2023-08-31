@@ -109,8 +109,15 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 		    }
 		}
 
+		var config = {
+				  fps: 10,
+				  rememberLastUsedCamera: true,
+				  // Only support camera scan type.
+				  supportedScanTypes: [0]
+				};
+		console.log([Html5QrcodeScanType.SCAN_TYPE_CAMERA])
 		var html5QrcodeScanner = new Html5QrcodeScanner(
-		    "reader", { fps: 10, qrbox: 550 });
+		    "reader", config);
 		html5QrcodeScanner.render(onScanSuccess);
 		});
 </script>
