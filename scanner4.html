@@ -92,7 +92,7 @@ function qrFound(qrCode){
 }
 
 var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
-    let minEdgePercentage = 0.35; // 35%
+    let minEdgePercentage = 0.80; // 80%
     let minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
     let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
     return {
@@ -102,8 +102,8 @@ var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
 }
 
 const html5QrCode = new Html5Qrcode("reader");
-reader.style.width = "1000px";
-html5QrCode.start({facingMode: "environment"},{fps: 10, qrbox: 300} ,qrFound)
+reader.style.width = "500px";
+html5QrCode.start({facingMode: "environment"},{fps: 10, qrbox: qrboxFunction} ,qrFound)
   .catch(err => {
   console.log(err);
 });
