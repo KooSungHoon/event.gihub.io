@@ -90,39 +90,40 @@ body{margin: 0; background: #333; display: flex; align-items: center; height: 10
 			return;
 		}
 	}
-
+/*
 	const html5QrCode = new Html5Qrcode("reader");
-
+	
 	html5QrCode.start({facingMode: "environment"},{fps: 10 },qrFound)
 	  .catch(err => {
 	  console.log(err);
 	});
+*/
 
-	/*document.addEventListener("DOMContentLoaded", function(event) {
-		var resultContainer = document.getElementById('qr-reader-results');
-		var lastResult, countResults = 0;
 
-		function onScanSuccess(decodedText, decodedResult) {
-		    if (decodedText !== lastResult) {
-		        ++countResults;
-		        lastResult = decodedText;
-		        // Handle on success condition with the decoded message.
-		        console.log(`Scan result ${decodedText}`, decodedResult);
-		        qrFound();
-		    }
-		}
+var resultContainer = document.getElementById('qr-reader-results');
+var lastResult, countResults = 0;
 
-		var config = {
-				  fps: 10,
-				  rememberLastUsedCamera: true,
-				  // Only support camera scan type.
-				  supportedScanTypes: [0]
-				};
-		console.log([Html5QrcodeScanType.SCAN_TYPE_CAMERA])
-		var html5QrcodeScanner = new Html5QrcodeScanner(
-		    "reader", config);
-		html5QrcodeScanner.render(onScanSuccess);
-		});*/
+function onScanSuccess(decodedText, decodedResult) {
+    if (decodedText !== lastResult) {
+        ++countResults;
+        lastResult = decodedText;
+        // Handle on success condition with the decoded message.
+        console.log(`Scan result ${decodedText}`, decodedResult);
+        qrFound();
+    }
+}
+
+var config = {
+		  fps: 10,
+		  rememberLastUsedCamera: true,
+		  // Only support camera scan type.
+		  supportedScanTypes: [0]
+		};
+console.log([Html5QrcodeScanType.SCAN_TYPE_CAMERA])
+var html5QrcodeScanner = new Html5QrcodeScanner(
+    "reader", config);
+html5QrcodeScanner.render(onScanSuccess);
+		
 </script>
 </body>
 </html>
