@@ -78,18 +78,11 @@ body {margin: 0; overflow: hidden;}
 </div>
 <script>
 
-var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
-    let minEdgePercentage = 0.40; // 40%
-    let minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
-    let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
-    return {
-        width: qrboxSize,
-        height: qrboxSize
-    };
-}
+
 
 var count = 1;	
 function qrFound(qrCode){
+	console.log(qrCode)
 	if(count === 1) {
 		$('#toast').addClass('show');
 		count ++;
@@ -98,9 +91,19 @@ function qrFound(qrCode){
 	}
 }
 
+var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
+    let minEdgePercentage = 0.45; // 45%
+    let minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
+    let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
+    return {
+        width: qrboxSize,
+        height: qrboxSize
+    };
+}
+
 const html5QrCode = new Html5Qrcode("reader");
 reader.style.width = "1000px";
-html5QrCode.start({facingMode: "environment"},{fps: 10, qrbox: 250} ,qrFound)
+html5QrCode.start({facingMode: "environment"},{fps: 10, qrbox: qrboxFunction} ,qrFound)
   .catch(err => {
   console.log(err);
 });
