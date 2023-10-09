@@ -56,12 +56,12 @@ print {
     }
 
     .mv.main {
-        background: url(/assets/images/main_.jpg) no-repeat top;
+        background: url(../images/main_.jpg) no-repeat top;
         background-size: cover
     }
 
     .mv.tokyo {
-        background: url(/assets/images/tokyo_.jpg) no-repeat top;
+        background: url(../images/tokyo_.jpg) no-repeat top;
         background-size: cover
     }
 
@@ -1048,7 +1048,7 @@ print {
     }
 
     .mv.main {
-        background: url(/assets/images/main_mo_.jpg) no-repeat top;
+        background: url(../images/main_mo_.jpg) no-repeat top;
         background-size: cover;
         bottom: 0;
         font-size: 0;
@@ -1066,7 +1066,7 @@ print {
     }
 
     .mv.tokyo {
-        background: url(/assets/images/tokyo_mo_.jpg) no-repeat top;
+        background: url(../images/tokyo_mo_.jpg) no-repeat top;
         background-size: cover;
         bottom: 0;
         font-size: 0;
@@ -1084,7 +1084,7 @@ print {
     }
 
     .mv.osaka {
-        background: url(/assets/images/osaka_mo_.jpg) no-repeat top;
+        background: url(../images/osaka_mo_.jpg) no-repeat top;
         background-size: cover;
         bottom: 0;
         font-size: 0;
@@ -1102,7 +1102,7 @@ print {
     }
     
     .mv.nagoya {
-        background: url(/assets/images/nagoya_mo_.jpg) no-repeat top;
+        background: url(../images/nagoya_mo_.jpg) no-repeat top;
         background-size: cover;
         bottom: 0;
         font-size: 0;
@@ -1120,7 +1120,7 @@ print {
     }    
 
     .mv.fukuoka {
-        background: url(/assets/images/fukuoka_mo_.jpg) no-repeat top;
+        background: url(../images/fukuoka_mo_.jpg) no-repeat top;
         background-size: cover;
         bottom: 0;
         font-size: 0;
