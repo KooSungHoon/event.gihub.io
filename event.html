@@ -91,7 +91,7 @@
                     </ul>
                   </span>
                 </div>
-                <div class="footer_info">
+                <div class="footer_info" data-aos="fade-up" data-aos-duration="1300">
                   <span>
                     「SEVENTEEN 'FOLLOW' THE CITY」<br>
                     に関するお問い合わせ先
@@ -147,7 +147,7 @@
                     </ul>
                   </span>
                 </div>
-                <div class="footer_info">
+                <div class="footer_info" data-aos="fade-up" data-aos-duration="1300">
                   <span>
                     「SEVENTEEN 'FOLLOW' THE CITY」<br>
                     に関するお問い合わせ先
@@ -313,7 +313,7 @@
                   </div>
                 </div>
 
-                <div class="footer_info">
+                <div class="footer_info" data-aos="fade-up" data-aos-duration="1300">
                   <span>
                     「SEVENTEEN 'FOLLOW' THE CITY」<br>
                     に関するお問い合わせ先
@@ -369,7 +369,7 @@
                     </ul>
                   </span>
                 </div>
-                <div class="footer_info">
+                <div class="footer_info" data-aos="fade-up" data-aos-duration="1300">
                   <span>
                     「SEVENTEEN 'FOLLOW' THE CITY」<br>
                     に関するお問い合わせ先
@@ -424,7 +424,7 @@
                     </ul>
                   </span>
                 </div>
-                <div class="footer_info">
+                <div class="footer_info" data-aos="fade-up" data-aos-duration="1300">
                   <span>
                     「SEVENTEEN 'FOLLOW' THE CITY」<br>
                     に関するお問い合わせ先
@@ -555,14 +555,13 @@
         });
   
         var fv = $('.swiper-wrapper').height();
-        console.log(fv)
+        // console.log(fv)
         $(".que").click(function() {
           $(this).next(".anw").stop().slideToggle(400);
           $(this).toggleClass('on').siblings().removeClass('on');
           $(this).next(".anw").siblings(".anw").slideUp(400); // 1개씩 펼치기
-          
-          // swiper.update();
-          // $('.swiper-wrapper').css('height', fv + 10+'px')
+      
+          setTimeout(() => swiper.update(), 100);
         });
         
         $(".city_tab .link__alpha").click(function() {
