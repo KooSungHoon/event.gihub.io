@@ -97,7 +97,7 @@ body.section_fukuoka {background-color: #ABA5A5;}
 .visuals img {position: absolute; width: 100%; top: 0; left: 0;}
 .inner {width: 100%; max-width: 944px; margin: 80px auto 0;}
 .sec_title {padding-top: 48px; margin-bottom: 48px; line-height: normal; text-align: center; display: block; font-family: 'Flama'; font-size: 40px;}
-.sec_title p {font-family:'Pretendard-Thin'; font-size: 17px; margin-top: 20px; word-break: keep-all; padding: 0px 30px;}
+.sec_title p {font-family:'Pretendard-Medium'; font-size: 17px; margin-top: 20px; word-break: keep-all; padding: 0px 30px;}
 .sch_title {margin-bottom: 80px; line-height: normal; text-align: center; display: block; font-family: 'Flama'; font-size: 40px;}
 #main_section {color: #fff;}
 #tokyo_section {color: #fff;}
