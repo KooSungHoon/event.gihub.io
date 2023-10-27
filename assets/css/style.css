@@ -116,9 +116,7 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 .shadow:after {position: absolute; content: ''; background: url('../images/follow.png') no-repeat; background-size: 480px; width: 480px; height: 244px; top: 114px; left: 50%; transform: translateX(-50%);}
 .info_card_wrap {display: flex; gap: 32px; flex-direction: column; margin-bottom: 160px;}
 
-
-
-.schedule_wrap {border-top: 1px solid #ffffff3d; padding-bottom: 160px; margin-bottom: 680px;}
+.schedule_wrap {border-top: 1px solid #ffffff3d; padding-bottom: 80px;}
 .que:first-child{border-top: 1px solid black;}
 .que {padding: 20px 0; position: relative; text-align: left; cursor: pointer; font-size: 14px; border-bottom: 1px solid #ffffff3d; transition: 0.8s;}
 .que > div {gap: 40px;}
@@ -134,3 +132,24 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 .que.on .arrow-top {display: block;}
 .mySwiper {background: #000;}
 .swiper-wrapper {transition: 0.4s;}
+
+.section_tokyo .info_card_wrap {margin-bottom: 120px;}
+.section_aichi .info_card_wrap {margin-bottom: 120px;}
+.section_osaka .info_card_wrap {margin-bottom: 120px;}
+.section_fukuoka .info_card_wrap {margin-bottom: 120px;}
+
+.sec_title.st {margin-bottom: 0;}
+.sec_title.st ul {justify-content: space-around; gap: 16px 24px; flex-wrap: wrap; width: 682px; margin: 24px auto 0;}
+.sec_title.st ul li {width: auto; color: rgba(255, 255, 255, 0.90); text-align: center; font-family: 'Pretendard-Medium'; font-size: 16px; font-style: normal; line-height: 24px;}
+
+.section_osaka .sec_title.st ul li {color: #000;}
+
+.footer_info {max-width: 500px; width: 100%; margin: 0 auto 160px; display: flex; flex-direction: column; gap: 60px;}
+.footer_info span {color: rgba(255, 255, 255, 0.90); text-align: center; font-family: 'Pretendard-Medium'; font-size: 20px; font-style: normal; font-weight: 500; line-height: 29px; letter-spacing: 0.2px;}
+.footer_info p {line-height: 20.3px; margin-top: 12px; opacity: 0.8; font-family: 'Pretendard-Medium'; display: block; font-size: 14px; color: rgba(255, 255, 255, 0.80);}
+.footer_info a {text-decoration: none; color: rgba(255, 255, 255, 0.90);}
+.footer_info > div {text-align: center;}
+.footer_info > div img {width: 40px; display: block; margin: 0 auto 24px;}
+.footer_info > div span {display: block; color: rgba(255, 255, 255, 0.80); text-align: center; font-family: 'Pretendard-Medium'; font-size: 14px; font-style: normal; line-height: 20.3px; letter-spacing: 0.14px;}
+
+.section_osaka .footer_info * {color: #000;}
