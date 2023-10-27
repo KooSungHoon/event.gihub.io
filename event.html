@@ -296,8 +296,8 @@
           </div>
         </div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <!-- <div class="swiper-button-next"></div> -->
+      <!-- <div class="swiper-button-prev"></div> -->
     </div>
 
 
@@ -308,16 +308,17 @@
         var bottomShadow = $(window).height() - 400;
         $('.shadow').css('top', bottomShadow+'px');
         
-        window.addEventListener('scroll', function(){
+        window.addEventListener('scroll', function(){     
 
-          var allHeight = $(window).scrollTop();
-          
-          //650~1150까지 스크롤바를 내리면,첫째카드의 opacity 1~0으로 서서히 바뀜
-          // y = ax + b(일차함수 형태), 대입법으로 a와 b를 구함
-          var y = (-1/500) * allHeight +115/80; 
-          $('.shadow').css('opacity',y);          
-
-
+          var shadowMove = $('.visuals_wrap').height() - $(window).height(); 
+          var shadowMoveFixed= $('.visuals_wrap').height() - 400;
+          if(window.scrollY >= shadowMove) {
+            $('.shadow').css('position', 'absolute');
+            $('.shadow').css('top', shadowMoveFixed+'px');
+          } else {
+            $('.shadow').css('position', 'fixed');
+            $('.shadow').css('top', bottomShadow+'px');
+          }
 
           if(window.scrollY >= visualHeight - $('.city_tab').height()) {
             $('.city_tab').addClass('fixed');
@@ -336,6 +337,17 @@
           var bottomShadow = $(window).height() - 400;
           $('.shadow').css('top', bottomShadow+'px');
           window.addEventListener('scroll', function(){
+
+            var shadowMove = $('.visuals_wrap').height() - $(window).height(); 
+            var shadowMoveFixed= $('.visuals_wrap').height() - 400;
+            if(window.scrollY >= shadowMove) {
+              $('.shadow').css('position', 'absolute');
+              $('.shadow').css('top', shadowMoveFixed+'px');
+            } else {
+              $('.shadow').css('position', 'fixed');
+              $('.shadow').css('top', bottomShadow+'px');
+            }
+
             if(window.scrollY >= visualHeight - $('.city_tab').height()) {
               $('.city_tab').addClass('fixed');
             } else {
