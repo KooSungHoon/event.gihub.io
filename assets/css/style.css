@@ -105,11 +105,11 @@ body.section_fukuoka {background-color: #ABA5A5;}
 #fukuoka_section {color: #fff;}
 .shadow {z-index: 9; width: 100%; height: 400px; position: fixed; top: 100%; left: 0;}
 
-body.section_tokyo .shadow {background: url('../images/shadow1.png') no-repeat; background-size: 100%;}
-body.section_aichi .shadow {background: url('../images/shadow2.png') no-repeat; background-size: 100%;}
-body.section_main .shadow {background: url('../images/shadow3.png') no-repeat; background-size: 100%;}
-body.section_osaka .shadow {background: url('../images/shadow4.png') no-repeat; background-size: 100%;}
-body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat; background-size: 100%;}
+body.section_tokyo .shadow {background: url('../images/shadow1.png') no-repeat; background-size: 100%; background-position: bottom;}
+body.section_aichi .shadow {background: url('../images/shadow2.png') no-repeat; background-size: 100%; background-position: bottom;}
+body.section_main .shadow {background: url('../images/shadow3.png') no-repeat; background-size: 100%; background-position: bottom;}
+body.section_osaka .shadow {background: url('../images/shadow4.png') no-repeat; background-size: 100%; background-position: bottom;}
+body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat; background-size: 100%; background-position: bottom;}
 
 
 
