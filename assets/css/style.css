@@ -153,3 +153,12 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 .footer_info > div span {display: block; color: rgba(255, 255, 255, 0.80); text-align: center; font-family: 'Pretendard-Medium'; font-size: 14px; font-style: normal; line-height: 20.3px; letter-spacing: 0.14px;}
 
 .section_osaka .footer_info * {color: #000;}
+
+
+@media (min-width: 2160px) {
+	body.section_tokyo .shadow, 
+	body.section_aichi .shadow, 
+	body.section_main .shadow, 
+	body.section_osaka .shadow, 
+	body.section_fukuoka .shadow {background-position: top;}
+}
