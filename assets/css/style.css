@@ -120,13 +120,12 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 
 .schedule_wrap {border-top: 1px solid #ffffff3d; padding-bottom: 160px; margin-bottom: 680px;}
 .que:first-child{border-top: 1px solid black;}
-.que {padding: 20px 0; position: relative; text-align: left; cursor: pointer; font-size: 14px; border-bottom: 1px solid #ffffff3d;}
+.que {padding: 20px 0; position: relative; text-align: left; cursor: pointer; font-size: 14px; border-bottom: 1px solid #ffffff3d; transition: 0.8s;}
 .que > div {gap: 40px;}
 .que > div strong {min-width: 240px; color: #FFB3AB; font-family: 'Pretendard-Medium'; font-size: 28px; line-height: normal;}
 .que > div p {display: flex; flex-direction: column; justify-content: space-between; color: #fff; opacity: 0.9; font-family: 'Pretendard-Medium'; font-size: 28px;}
 .que > div p span {display: block; font-family: 'Pretendard-Thin'; font-size: 16px;}
-.que.on {border-bottom: none;}
-.que.on span {font-weight: bold;}
+.que.on {border-bottom: 1px solid transparent;}
 .anw {display: none; text-align: left; overflow: hidden; font-size: 14px; padding-bottom: 40px; border-bottom: 1px solid #ffffff3d;}
 .arrow-wrap {position: absolute; top: 50%; right: 0; transform: translateY(-50%);}
 .que .arrow-top {display: none;}
