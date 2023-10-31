@@ -15,7 +15,7 @@
 
 
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,23 +32,37 @@
   
     <div class="wrap">
       <div class="shadow"></div>
-      <div class="city_tab fl">
-        <a class="link__alpha" onclick="swiper.slideTo((0), (1000), true);">TOKYO / SAITAMA</a>
+      <div class="city_tab fl pc">
+        <a class="link__alpha" onclick="swiper.slideTo((0), (1000), true);">SAITAMA / TOKYO</a>
           <a class="link__alpha" onclick="swiper.slideTo((1), (1000), true);">AICHI</a>
           <a class="link__alpha current" onclick="swiper.slideTo((2), (1000), true);"><img src="assets/images/logo.svg"></a>  
           <a class="link__alpha" onclick="swiper.slideTo((3), (1000), true);">OSAKA</a>
           <a class="link__alpha" onclick="swiper.slideTo((4), (1000), true);">FUKUOKA</a>
       </div>
-      <!-- <div class="follow">
-        <img src="assets/images/follow.png">
-      </div> -->
+      <div class="mo top_shadow">
+        <img src="assets/images/logo.svg">
+      </div>
       <div class="visuals_wrap">
-        <img class="vi v1" src="assets/images/main.png">
+        <img class="vi v1 pc" src="assets/images/main.png">
+        <img class="vi v1 mo" src="assets/images/main_visual_mo.jpg">
         <div class="visuals">
-          <img class="vi v2" src="assets/images/tokyo.png">
-          <img class="vi v3" src="assets/images/aichi.png">
-          <img class="vi v4" src="assets/images/osaka.png">
-          <img class="vi v5" src="assets/images/fukuoka.png">
+          <img class="vi v2 pc" src="assets/images/tokyo.png">
+          <img class="vi v2 mo" src="assets/images/tokyo_visual_mo.jpg">
+          <img class="vi v3 pc" src="assets/images/aichi.png">
+          <img class="vi v3 mo" src="assets/images/aichi_visual_mo.jpg">
+          <img class="vi v4 pc" src="assets/images/osaka.png">
+          <img class="vi v4 mo" src="assets/images/osaka_visual_mo.jpg">
+          <img class="vi v5 pc" src="assets/images/fukuoka.png">
+          <img class="vi v5 mo" src="assets/images/fukuoka_visual_mo.jpg">
+        </div>
+      </div>
+      <div class="mo sticky">
+        <div class="mo_city_tab fl">
+          <a class="link__alpha current" onclick="swiper.slideTo((2), (1000), true);">MAIN</a>
+          <a class="link__alpha" onclick="swiper.slideTo((0), (1000), true);">SAITAMA / TOKYO</a>
+          <a class="link__alpha" onclick="swiper.slideTo((1), (1000), true);">AICHI</a>
+          <a class="link__alpha" onclick="swiper.slideTo((3), (1000), true);">OSAKA</a>
+          <a class="link__alpha" onclick="swiper.slideTo((4), (1000), true);">FUKUOKA</a>
         </div>
       </div>
       <div class="swiper svt_follow_wrap">
@@ -58,39 +72,40 @@
             <div id="tokyo_section">
               <div class="inner">
                 <div class="info_card_wrap">
-                  <img src="assets/images/m_ic_to.png" data-aos="fade-up" data-aos-duration="1300">
-                  <span class="a11yHidden">
-                    The city info<br>
-                    SEVENTEENが 「SEVENTEEN TOUR 'FOLLOW' TO JAPAN」 <br>
-                    に合わせ、公演開催5都市の各所とコラボレーション。<br>
-                    各都市で、楽しい思い出を一緒に。#SEVENTEENと行こう #SVT_FOLLOW_THECITY
-                  </span>
-                  <span class="sec_title" data-aos="fade-up" data-aos-duration="1300">
-                    SEVENTEEN<br>'FOLLOW' THE CITY RALLY
-                    <p>
-                      「SEVENTEEN TOUR 'FOLLOW' TO JAPAN」にあわせて東京・埼玉・愛知・大阪・福岡で開催される 「SEVENTEEN 'FOLLOW' THE CITY」をより楽しんでいただくために、開催5都市でデジタルスタンプラリーを開催！
-                      コンサートチケットをお持ちの方もそうでない方も、楽しんでいただけます。
-                    </p>
-                  </span>
-                  <img src="assets/images/m_ic7.png" data-aos="fade-up" data-aos-duration="1300">
-                  <span class="a11yHidden">
-                    注 意 事 項<br>
-                    「SEVENTEEN 'FOLLOW' THE CITY」では、メディア取材や映像コンテンツ制作を目的として、
-                    映像収録や写真撮影のカメラが入る場合がございます。撮影されたものはSNS、メディアなどで公開される場合がございますので、
-                    あらかじめご了承ください。
-                  </span>
+                  <a id="c1-1">
+                    <img src="assets/images/sc_tk_1.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  <a id="c1-2">
+                    <img src="assets/images/sc_tk_2.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>                  
+                  <a id="c1-3" href="https://sunshinecity.jp/event/entry-26522.html" target="_blank">
+                    <img src="assets/images/sc_tk_3.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  <a id="c1-4" href="https://www.hmv.co.jp/news/article/231017129/" target="_blank">
+                    <img src="assets/images/sc_tk_4.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  <a id="c1-5" href="https://www.hmv.co.jp/news/article/231017129/" target="_blank"">
+                    <img  src="assets/images/sc_tk_5.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  <a id="c1-6" href="https://www.unitedcinemas.jp/all/campaign_now.php?info=79551" target="_blank">
+                    <img src="assets/images/sc_tk_6.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  <a id="c1-7" href="https://seventeen-cafe-futureinthepast.jp/" target="_blank">
+                    <img src="assets/images/sc_tk_7.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+
                   <span class="sec_title st" data-aos="fade-up" data-aos-duration="1300">
                     SPECIAL THANKS
                     <ul class="fl">
                       <li>株式会社サンシャインシティ</li>
                       <li>マクセル アクアパーク品川</li>
-                      <li>株式会社ローソンエンタテインメント</li>
-                      <li>マクセル アクアパーク品川</li>
+                      <li>ユナイテッド・シネマ株式会社</li>
                       <li>株式会社ローソンエンタテインメント</li>
                       <li>Weverse Japan</li>
                     </ul>
                   </span>
                 </div>
+                <img class="noti" src="assets/images/noti_white.png">
                 <div class="footer_info" data-aos="fade-up" data-aos-duration="1300">
                   <span>
                     「SEVENTEEN 'FOLLOW' THE CITY」<br>
@@ -114,39 +129,31 @@
             <div id="aichi_section">
               <div class="inner">
                 <div class="info_card_wrap">
-                  <img src="assets/images/m_ic_ai.png" data-aos="fade-up" data-aos-duration="1300">
-                  <span class="a11yHidden">
-                    The city info<br>
-                    SEVENTEENが 「SEVENTEEN TOUR 'FOLLOW' TO JAPAN」 <br>
-                    に合わせ、公演開催5都市の各所とコラボレーション。<br>
-                    各都市で、楽しい思い出を一緒に。#SEVENTEENと行こう #SVT_FOLLOW_THECITY
-                  </span>
-                  <span class="sec_title" data-aos="fade-up" data-aos-duration="1300">
-                    SEVENTEEN<br>'FOLLOW' THE CITY RALLY
-                    <p>
-                      「SEVENTEEN TOUR 'FOLLOW' TO JAPAN」にあわせて東京・埼玉・愛知・大阪・福岡で開催される 「SEVENTEEN 'FOLLOW' THE CITY」をより楽しんでいただくために、開催5都市でデジタルスタンプラリーを開催！
-                      コンサートチケットをお持ちの方もそうでない方も、楽しんでいただけます。
-                    </p>
-                  </span>
-                  <img src="assets/images/m_ic7.png" data-aos="fade-up" data-aos-duration="1300">
-                  <span class="a11yHidden">
-                    注 意 事 項<br>
-                    「SEVENTEEN 'FOLLOW' THE CITY」では、メディア取材や映像コンテンツ制作を目的として、
-                    映像収録や写真撮影のカメラが入る場合がございます。撮影されたものはSNS、メディアなどで公開される場合がございますので、
-                    あらかじめご了承ください。
-                  </span>
+                  <a id="c2-1" href="https://www.hmv.co.jp/news/article/231017129/" target="_blank">
+                    <img src="assets/images/sc_ai_1.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  
+                  <a id="c2-2" href="https://www.unitedcinemas.jp/all/campaign_now.php?info=79551" target="_blank">
+                    <img src="assets/images/sc_ai_2.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  
+                  <a id="c2-3">
+                    <img src="assets/images/sc_ai_3.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  
+                  <a id="c2-4" href="https://seventeen-cafe-futureinthepast.jp/" target="_blank">
+                    <img src="assets/images/sc_ai_4.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  
                   <span class="sec_title st" data-aos="fade-up" data-aos-duration="1300">
                     SPECIAL THANKS
                     <ul class="fl">
-                      <li>株式会社サンシャインシティ</li>
-                      <li>マクセル アクアパーク品川</li>
+                      <li>ユナイテッド・シネマ株式会社</li>
                       <li>株式会社ローソンエンタテインメント</li>
-                      <li>マクセル アクアパーク品川</li>
-                      <li>株式会社ローソンエンタテインメント</li>
-                      <li>Weverse Japan</li>
                     </ul>
                   </span>
                 </div>
+                <img class="noti" src="assets/images/noti_white.png">
                 <div class="footer_info" data-aos="fade-up" data-aos-duration="1300">
                   <span>
                     「SEVENTEEN 'FOLLOW' THE CITY」<br>
@@ -168,35 +175,41 @@
           <div class="swiper-slide">
             <div id="main_section">
               <div class="inner">
-                <div class="info_card_wrap">
-                  <img  src="assets/images/m_ic1.png" data-aos="fade-up" data-aos-duration="1300">
+                <div class="info_card_wrap pb123">
+                  <img class="pc" src="assets/images/m_ic1.png" data-aos="fade-up" data-aos-duration="1300">
+                  <img class="mo" src="assets/images/mo_ic1.png" data-aos="fade-up" data-aos-duration="1300">
                   <span class="a11yHidden">
                     The city info<br>
                     SEVENTEENが 「SEVENTEEN TOUR 'FOLLOW' TO JAPAN」 <br>
                     に合わせ、公演開催5都市の各所とコラボレーション。<br>
                     各都市で、楽しい思い出を一緒に。#SEVENTEENと行こう #SVT_FOLLOW_THECITY
                   </span>
-                  <span class="sec_title" data-aos="fade-up" data-aos-duration="1300">
-                    SEVENTEEN<br>'FOLLOW' THE CITY RALLY
+                </div>
+                <div class="info_card_wrap">
+                  <span class="sec_title pt0" data-aos="fade-up" data-aos-duration="1300">
+                    SEVENTEEN<br class="pc"> 'FOLLOW'<br class="mo"> THE CITY RALLY
                     <p>
-                      「SEVENTEEN TOUR 'FOLLOW' TO JAPAN」にあわせて東京・埼玉・愛知・大阪・福岡で開催される 「SEVENTEEN 'FOLLOW' THE CITY」をより楽しんでいただくために、開催5都市でデジタルスタンプラリーを開催！
-                      コンサートチケットをお持ちの方もそうでない方も、楽しんでいただけます。
+                      「SEVENTEEN TOUR 'FOLLOW' TO JAPAN」にあわせて埼玉・東京・愛知・大阪・福岡で開催される<br class="pc">
+                      「SEVENTEEN 'FOLLOW' THE CITY」をより楽しんでいただくために、開催5都市でデジタルスタンプラリーを開催！コンサートチケットをお持ちの方もそうでない方も、楽しんでいただけます。
                     </p>
                   </span>
-                  <img src="assets/images/m_ic2.png" data-aos="fade-up" data-aos-duration="1300">
+                  <img class="pc" src="assets/images/m_ic2.png" data-aos="fade-up" data-aos-duration="1300">
+                  <img class="mo" src="assets/images/mo_ic2.png" data-aos="fade-up" data-aos-duration="1300">
                   <span class="a11yHidden">
                     獲 得 期 間<br>
                     ス タ ン プ<br>
                     2023年11月18日(土)～12月18日(月)<br>
                     ※各都市・各プログラムによってスタンプ設置期間は異なります。
                   </span>
-                  <img src="assets/images/m_ic3.png" data-aos="fade-up" data-aos-duration="1300">
+                  <img class="pc" src="assets/images/m_ic3.png" data-aos="fade-up" data-aos-duration="1300">
+                  <img class="mo" src="assets/images/mo_ic3.png" data-aos="fade-up" data-aos-duration="1300">
                   <span class="a11yHidden">
                     URL<br>
                     URLは11月中旬公開予定<br>
                     ※アプリダウンロードは不要です。
                   </span>
-                  <img src="assets/images/m_ic4.png" data-aos="fade-up" data-aos-duration="1300">
+                  <img class="pc" src="assets/images/m_ic4.png" data-aos="fade-up" data-aos-duration="1300">
+                  <img class="mo" src="assets/images/mo_ic4.png" data-aos="fade-up" data-aos-duration="1300">
                   <span class="a11yHidden">
                     獲 得 方 法<br>
                     ス タ ン プ<br>
@@ -205,7 +218,8 @@
                     スタンプは1か所につきお一人様1回まで取得（読込み）いただけます。スタンプは各スポット以下に記載の期間にでのみ行っております。<br>
                     期間外のご来場では獲得できません。
                   </span>
-                  <img src="assets/images/m_ic5.png" data-aos="fade-up" data-aos-duration="1300">
+                  <img class="pc" src="assets/images/m_ic5.png" data-aos="fade-up" data-aos-duration="1300">
+                  <img class="mo" src="assets/images/mo_ic5.png" data-aos="fade-up" data-aos-duration="1300">
                   <span class="a11yHidden">
                     特 典<br>
                     スタンプ獲得数により各都市の特典引換え所で限定ランダムフォトカードの特典に引換えることが可能です。<br>
@@ -219,7 +233,8 @@
                     スタンプスポットをすべて回っていただく必要はございません。<br>
                     特典は1日あたり配布上限がありますのでご注意ください。
                   </span>
-                  <img src="assets/images/m_ic6.png" data-aos="fade-up" data-aos-duration="1300">
+                  <img class="pc" src="assets/images/m_ic6.png" data-aos="fade-up" data-aos-duration="1300">
+                  <img class="mo" src="assets/images/mo_ic6.png" data-aos="fade-up" data-aos-duration="1300">
                   <span class="a11yHidden">
                     注 意 事 項<br>
                     ※各引換え期間と実施内容は変更になる場合がございます。<br>
@@ -234,13 +249,25 @@
                 </span>
                 <!-- main SCHEDULE -->
                 <div class="schedule_wrap" data-aos="fade-up" data-aos-duration="1300">
-                  <div class="que" data-height="704">
-                    <div class="fl">
-                      <strong>TOKYO/SAITAMA<br> 特典引換所</strong>
-                      <p>
-                        11.22 WED - 11.26 SUN
-                        <span>※ 埼玉県内にはデジタルスタンプスポットはありますが、特典引換え場所はありません。</span>
+                  <div class="que">
+                    <div class="fl flex-c">
+                      <strong>SAITAMA / TOKYO</strong>
+                      <p class="font16">特典引換所</p>
+                      <p class="pc">
+                        場所：後日公開<br>
+                        期間：11.22 WED - 11.26 SUN
                       </p>
+                      <p class="mo">
+                        場所：後日公開 &nbsp;|&nbsp; 期間：11.22 WED - 11.26 SUN
+                      </p>
+                      <span>※ 埼玉県内にはデジタルスタンプスポットはありますが 特典引換え場所はありません。</span>
+                      <div class="spot fl ">
+                        <p>SPOT</p>
+                        <a class="spot_free">無料</a>
+                        <p>7 箇所</p>
+                        <a>有料</a>
+                        <p>7 箇所</p>
+                      </div>
                     </div> 
                     <div class="arrow-wrap">
                       <span class="arrow-top"><img src="assets/images/arrow-up.png"></span>
@@ -250,17 +277,132 @@
                   <div class="anw">
                     <span>
                       <div class="test_wrap">
-                        <img src="assets/images/t_cal.png">
+                        <ul class="store_list">
+                          <li>
+                            <a onclick="goSc('#c1-7')">
+                              <div>
+                                <p class="free">無料</p>
+                                <span>ベルーナドーム</span>
+                              </div>
+                              <span>11.18 SAT - 11.26 SUN</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c1-7')">
+                              <div>
+                                <p>有料</p>
+                                <span>CAFE@BOX cafe&space 表参道店</span>
+                              </div>
+                              <span>11.18 SAT - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c1-7')">
+                              <div>
+                                <p>有料</p>
+                                <span>CAFE@BOX cafe&space キュープラザ原宿店</span>
+                              </div>
+                              <span>11.18 SAT - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c1-7')">
+                              <div>
+                                <p>有料</p>
+                                <span>CAFE@BOX cafe&space 東京ソラマチ2号店</span>
+                              </div>
+                              <span>11.18 SAT - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c1-7')">
+                              <div>
+                                <p>有料</p>
+                                <span>CAFE@BOX cafe&space 表参道店</span>
+                              </div>
+                              <span>11.23 THU - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c1-6')">
+                              <div>
+                                <p class="free">無料</p>
+                                <span>UNITED CINEMASとしまえん</span>
+                              </div>
+                              <span>11.18 SAT - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c1-6')">
+                              <div>
+                                <p class="free">無料</p>
+                                <span>UNITED CINEMASアクアシティお台場</span>
+                              </div>
+                              <span>11.18 SAT - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c1-5')">
+                              <div>
+                                <p>有料</p>
+                                <span>PHOTO EXHIBITION</span>
+                              </div>
+                              <span>11.18 SAT - 12.3 SUN</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c1-4')">
+                              <div>
+                                <p>有料</p>
+                                <span>PHOTO EXHIBITION大宮shop</span>
+                              </div>
+                              <span>11.18 SAT - 12.3 SUN</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c1-3')">
+                              <div>
+                                <p>無料</p>
+                                <span>Sunshine City</span>
+                              </div>
+                              <span>11.20 MON - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c1-2')">
+                              <div>
+                                <p>有料</p>
+                                <span>
+                                  NIGHT AQUARIUM
+                                  <b>※ SEVENTEEN 'FOLLOW' THE CITY NIGHT AQUARIUM開催時間のみ</b>
+                                </span>
+                              </div>
+                              <span>11.23 THU - 11.24.FRI</span>
+                            </a>
+                          </li>
+                        </ul>
                       </div>
                     </span>
                   </div>
-                  <div class="que" data-height="">
-                    <div class="fl">
-                      <strong>AICHI<br> 特典引換所</strong>
-                      <p>
-                        11.29 WED - 12.4 MON
+                  <div class="que">
+                    <div class="fl flex-c">
+                      <strong>AICHI</strong>
+                      <p class="font16">特典引換所</p>
+                      <p class="pc">
+                        場所：後日公開<br>
+                        期間：11.29 WED - 12.4 MON
                       </p>
-                    </div>
+                      <p class="mo">
+                        場所：後日公開 &nbsp;|&nbsp; 期間：11.29 WED - 12.4 MON
+                      </p>
+                      <div class="spot fl ">
+                        <p>SPOT</p>
+                        <a class="spot_free">無料</a>
+                        <p>9 箇所</p>
+                        <a>有料</a>
+                        <p>4 箇所</p>
+                      </div>
+                    </div> 
                     <div class="arrow-wrap">
                       <span class="arrow-top"><img src="assets/images/arrow-up.png"></span>
                       <span class="arrow-bottom"><img src="assets/images/arrow-down.png"></span>
@@ -269,16 +411,65 @@
                   <div class="anw">
                     <span>
                       <div class="test_wrap2">
-                        <img src="assets/images/a_cal.png">
+                        <ul class="store_list">
+                          <li>
+                            <a onclick="goSc('#c2-4')">
+                              <div>
+                                <p>有料</p>
+                                <span>CAFE@BOX cafe&space 名古屋ラシック1号店</span>
+                              </div>
+                              <span>11.18 SAT - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c2-3')">
+                              <div>
+                                <p>有料</p>
+                                <span>POP-UP STORE</span>
+                              </div>
+                              <span>11.23 THU - 12.3 SUN</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c2-2')">
+                              <div>
+                                <p class="free">無料</p>
+                                <span>UNITED CINEMAS</span>
+                              </div>
+                              <span>11.18 SAT - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c2-1')">
+                              <div>
+                                <p>有料</p>
+                                <span>PHOTO EXHIBITION</span>
+                              </div>
+                              <span>11.18 SAT - 12.4 MON</span>
+                            </a>
+                          </li>
+                        </ul>
                       </div>
                     </span>
                   </div>
-                  <div class="que" data-height="">
-                    <div class="fl">
-                      <strong>OSAKA<br> 特典引換所</strong>
-                      <p>
-                        12.6 WED - 12.11 MON
+                  <div class="que">
+                    <div class="fl flex-c">
+                      <strong>OSAKA</strong>
+                      <p class="font16">特典引換所</p>
+                      <p class="pc">
+                        場所：後日公開<br>
+                        期間：12.6 WED - 12.11 MON
                       </p>
+                      <p class="mo">
+                        場所：後日公開 &nbsp;|&nbsp; 期間：12.6 WED - 12.11 MON
+                      </p>
+                      <div class="spot fl ">
+                        <p>SPOT</p>
+                        <a class="spot_free">無料</a>
+                        <p>6 箇所</p>
+                        <a>有料</a>
+                        <p>7 箇所</p>
+                      </div>
                     </div> 
                     <div class="arrow-wrap">
                       <span class="arrow-top"><img src="assets/images/arrow-up.png"></span>
@@ -288,16 +479,74 @@
                   <div class="anw">
                     <span>
                       <div class="test_wrap3">
-                        <img src="assets/images/o_cal.png">
+                        <ul class="store_list">
+                          <li>
+                            <a onclick="goSc('#c4-4')">
+                              <div>
+                                <p>有料</p>
+                                <span>CAFE@あべのcontact</span>
+                              </div>
+                              <span>11.18 SAT - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c4-5')">
+                              <div>
+                                <p>有料</p>
+                                <span>CAFE@BOX cafe&space 天王寺MIO店</span>
+                              </div>
+                              <span>11.23 THU - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c4-1')">
+                              <div>
+                                <p>有料</p>
+                                <span>POPUP-STORE</span>
+                              </div>
+                              <span>12.2 SAT - 12.10 SUN</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c4-3')">
+                              <div>
+                                <p class="free">無料</p>
+                                <span>UNITED CINEMAS</span>
+                              </div>
+                              <span>11.18 SAT - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c4-2')">
+                              <div>
+                                <p>有料</p>
+                                <span>PHOTO EXHIBITION</span>
+                              </div>
+                              <span>12.2 SAT - 12.17 SUN</span>
+                            </a>
+                          </li>
+                        </ul>
                       </div>
                     </span>
                   </div>
                   <div class="que" data-height="">
-                    <div class="fl">
-                      <strong>FUKUOKA<br> 特典引換所</strong>
-                      <p>
-                        12.15 FRI - 12.18 MON
+                    <div class="fl flex-c">
+                      <strong>FUKUOKA</strong>
+                      <p class="font16">特典引換所</p>
+                      <p class="pc">
+                        場所：後日公開<br>
+                        期間：12.15 FRI - 12.18 MON
                       </p>
+                      <p class="mo">
+                        場所：後日公開 &nbsp;|&nbsp; 期間：12.15 FRI - 12.18 MON
+                      </p>
+                      <div class="spot fl ">
+                        <p>SPOT</p>
+                        <a class="spot_free">無料</a>
+                        <p>9 箇所</p>
+                        <a>有料</a>
+                        <p>4 箇所</p>
+                      </div>
                     </div> 
                     <div class="arrow-wrap">
                       <span class="arrow-top"><img src="assets/images/arrow-up.png"></span>
@@ -307,11 +556,108 @@
                   <div class="anw">
                     <span>
                       <div class="test_wrap3">
-                        <img src="assets/images/f_cal.png">
+                        <ul class="store_list">
+                          <li>
+                            <a onclick="goSc('#c5-5')">
+                              <div>
+                                <p>有料</p>
+                                <span>CAFE@BOX cafe&space 博多マルイ店</span>
+                              </div>
+                              <span>11.23 THU - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c5-4')">
+                              <div>
+                                <p>有料</p>
+                                <span>POPUP STORE</span>
+                              </div>
+                              <span>12.9 SAT - 12.17 SUN</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c5-3')">
+                              <div>
+                                <p class="free">無料</p>
+                                <span>UNITED CINEMAS</span>
+                              </div>
+                              <span>11.18 SAT - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c5-2')">
+                              <div>
+                                <p>有料</p>
+                                <span>PHOTO EXHIBITION</span>
+                              </div>
+                              <span>12.2 SAT - 12.18 MON</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a onclick="goSc('#c5-1')">
+                              <div>
+                                <p class="free">無料</p>
+                                <span>JET</span>
+                              </div>
+                              <span>11.18 SAT - 12.18 MON</span>
+                            </a>
+                          </li>
+                        </ul>
                       </div>
                     </span>
                   </div>
                 </div>
+                <img class="pc noti" src="assets/images/noti.png" data-aos="fade-up" data-aos-duration="1300">
+                <img class="mo noti" src="assets/images/mo_noti.png" data-aos="fade-up" data-aos-duration="1300">
+                <div class="footer_info" data-aos="fade-up" data-aos-duration="1300">
+                  <span>
+                    「SEVENTEEN 'FOLLOW' THE CITY」<br>
+                    に関するお問い合わせ先
+                    <a href="mailto:support_thecity@hybejapan.com">support_thecity@hybejapan.com</a>
+                    <p>
+                      期間：2023年 10月16日(月)～12月24日(日)<br>
+                      営業時間：木曜~月曜9:00〜17:00　※火曜・水曜除く
+                    </p>
+                  </span>
+                  <div>
+                    <img src="assets/images/logo.svg">
+                    <span>ⓒ PLEDIS ENTERTAINMENT & HYBE. All Rights Reserved</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div id="osaka_section">
+              <div class="inner">
+                <div class="info_card_wrap">
+                  <a id="c4-1">
+                    <img src="assets/images/sc_os_1.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  <a id="c4-2" href="https://www.hmv.co.jp/news/article/231017129/" target="_blank">
+                    <img src="assets/images/sc_os_2.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  <a id="c4-3" href="https://www.unitedcinemas.jp/all/campaign_now.php?info=79551" target="_blank">
+                    <img src="assets/images/sc_os_3.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  <a id="c4-4" href="https://seventeen-cafe-futureinthepast.jp/" target="_blank">
+                    <img src="assets/images/sc_os_4.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  <a id="c4-5" href="https://seventeen-cafe-futureinthepast.jp/" target="_blank">
+                    <img src="assets/images/sc_os_5.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  
+                  <span class="sec_title st" style="color: #fff;" data-aos="fade-up" data-aos-duration="1300">
+                    SPECIAL THANKS
+                    <ul class="fl">
+                      <li>ユナイテッド・シネマ株式会社</li>
+                      <li>株式会社ローソンエンタテインメント</li>
+                    </ul>
+                  </span>
+                </div>
+
+                <img class="noti" src="assets/images/noti_black.png">
 
                 <div class="footer_info" data-aos="fade-up" data-aos-duration="1300">
                   <span>
@@ -330,100 +676,39 @@
                 </div>
               </div>
             </div>
-
-          </div>
-          <div class="swiper-slide">
-            <div id="osaka_section">
-              <div class="inner">
-                <div class="info_card_wrap">
-                  <img src="assets/images/m_ic_os.png" data-aos="fade-up" data-aos-duration="1300">
-                  <span class="a11yHidden">
-                    The city info<br>
-                    SEVENTEENが 「SEVENTEEN TOUR 'FOLLOW' TO JAPAN」 <br>
-                    に合わせ、公演開催5都市の各所とコラボレーション。<br>
-                    各都市で、楽しい思い出を一緒に。#SEVENTEENと行こう #SVT_FOLLOW_THECITY
-                  </span>
-                  <span class="sec_title" data-aos="fade-up" data-aos-duration="1300">
-                    SEVENTEEN<br>'FOLLOW' THE CITY RALLY
-                    <p>
-                      「SEVENTEEN TOUR 'FOLLOW' TO JAPAN」にあわせて東京・埼玉・愛知・大阪・福岡で開催される 「SEVENTEEN 'FOLLOW' THE CITY」をより楽しんでいただくために、開催5都市でデジタルスタンプラリーを開催！
-                      コンサートチケットをお持ちの方もそうでない方も、楽しんでいただけます。
-                    </p>
-                  </span>
-                  <img src="assets/images/m_ic8.png" data-aos="fade-up" data-aos-duration="1300">
-                  <span class="a11yHidden">
-                    注 意 事 項<br>
-                    「SEVENTEEN 'FOLLOW' THE CITY」では、メディア取材や映像コンテンツ制作を目的として、
-                    映像収録や写真撮影のカメラが入る場合がございます。撮影されたものはSNS、メディアなどで公開される場合がございますので、
-                    あらかじめご了承ください。
-                  </span>
-                  <span class="sec_title st" data-aos="fade-up" data-aos-duration="1300">
-                    SPECIAL THANKS
-                    <ul class="fl">
-                      <li>株式会社サンシャインシティ</li>
-                      <li>マクセル アクアパーク品川</li>
-                      <li>株式会社ローソンエンタテインメント</li>
-                      <li>マクセル アクアパーク品川</li>
-                      <li>株式会社ローソンエンタテインメント</li>
-                      <li>Weverse Japan</li>
-                    </ul>
-                  </span>
-                </div>
-                <div class="footer_info" data-aos="fade-up" data-aos-duration="1300">
-                  <span>
-                    「SEVENTEEN 'FOLLOW' THE CITY」<br>
-                    に関するお問い合わせ先
-                    <a href="mailto:support_thecity@hybejapan.com">support_thecity@hybejapan.com</a>
-                    <p>
-                      期間：10月16日(月)～12月24日(日)<br>
-                      営業時間：木曜~月曜9:00〜17:00　※火曜・水曜除く
-                    </p>
-                  </span>
-                  <div>
-                    <img src="assets/images/logo_black.svg">
-                    <span>ⓒPLEDIS ENTERTAINMENT & HYBE. All Rights Reserved</span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="swiper-slide">
             <div id="fukuoka_section">
               <div class="inner">
                 <div class="info_card_wrap">
-                  <img src="assets/images/m_ic_fu.png" data-aos="fade-up" data-aos-duration="1300">
-                  <span class="a11yHidden">
-                    The city info<br>
-                    SEVENTEENが 「SEVENTEEN TOUR 'FOLLOW' TO JAPAN」 <br>
-                    に合わせ、公演開催5都市の各所とコラボレーション。<br>
-                    各都市で、楽しい思い出を一緒に。#SEVENTEENと行こう #SVT_FOLLOW_THECITY
-                  </span>
-                  <span class="sec_title" data-aos="fade-up" data-aos-duration="1300">
-                    SEVENTEEN<br>'FOLLOW' THE CITY RALLY
-                    <p>
-                      「SEVENTEEN TOUR 'FOLLOW' TO JAPAN」にあわせて東京・埼玉・愛知・大阪・福岡で開催される 「SEVENTEEN 'FOLLOW' THE CITY」をより楽しんでいただくために、開催5都市でデジタルスタンプラリーを開催！
-                      コンサートチケットをお持ちの方もそうでない方も、楽しんでいただけます。
-                    </p>
-                  </span>
-                  <img src="assets/images/m_ic7.png" data-aos="fade-up" data-aos-duration="1300">
-                  <span class="a11yHidden">
-                    注 意 事 項<br>
-                    「SEVENTEEN 'FOLLOW' THE CITY」では、メディア取材や映像コンテンツ制作を目的として、
-                    映像収録や写真撮影のカメラが入る場合がございます。撮影されたものはSNS、メディアなどで公開される場合がございますので、
-                    あらかじめご了承ください。
-                  </span>
+                  <a id="c5-1" href="https://www.starflyer.jp/campaign/2023/seventeen/" target="_blank">
+                    <img src="assets/images/sc_fu_1.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  <a id="c5-2" href="https://www.hmv.co.jp/news/article/231017129/" target="_blank">
+                    <img src="assets/images/sc_fu_2.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  <a id="c5-3" href="https://www.unitedcinemas.jp/all/campaign_now.php?info=79551" target="_blank">
+                    <img src="assets/images/sc_fu_3.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  <a id="c5-4">
+                    <img src="assets/images/sc_fu_4.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  <a id="c5-5" href="https://seventeen-cafe-futureinthepast.jp/" target="_blank">
+                    <img src="assets/images/sc_fu_5.png" data-aos="fade-up" data-aos-duration="1300">
+                  </a>
+                  
                   <span class="sec_title st" data-aos="fade-up" data-aos-duration="1300">
                     SPECIAL THANKS
                     <ul class="fl">
-                      <li>株式会社サンシャインシティ</li>
-                      <li>マクセル アクアパーク品川</li>
+                      <li>ユナイテッド・シネマ株式会社</li>
                       <li>株式会社ローソンエンタテインメント</li>
-                      <li>マクセル アクアパーク品川</li>
-                      <li>株式会社ローソンエンタテインメント</li>
-                      <li>Weverse Japan</li>
+                      <li>株式会社スターフライヤー</li>
                     </ul>
                   </span>
                 </div>
+
+                <img class="noti" src="assets/images/noti_white.png">
+
                 <div class="footer_info" data-aos="fade-up" data-aos-duration="1300">
                   <span>
                     「SEVENTEEN 'FOLLOW' THE CITY」<br>
@@ -458,35 +743,8 @@
         
         window.addEventListener('scroll', function(){     
 
+          
           var shadowMove = $('.visuals_wrap').height() - $(window).height(); 
-          var shadowMoveFixed= $('.visuals_wrap').height() - 400;
-          if(window.scrollY >= shadowMove) {
-            $('.shadow').css('position', 'absolute');
-            $('.shadow').css('top', shadowMoveFixed+'px');
-          } else {
-            $('.shadow').css('position', 'fixed');
-            $('.shadow').css('top', bottomShadow+'px');
-          }
-
-          if(window.scrollY >= visualHeight - $('.city_tab').height()) {
-            $('.city_tab').addClass('fixed');
-          } else {
-            $('.city_tab').removeClass('fixed');
-          }
-        });
-
-
-        $(window).on('resize', function(){
-          swiper.update();
-
-          var visualHeight = $('.visuals_wrap').height();  
-
-          // 모바일의 경우 $(window).height() 가 아닌 visual height값으로 진행.
-          var bottomShadow = $(window).height() - 400;
-          $('.shadow').css('top', bottomShadow+'px');
-          window.addEventListener('scroll', function(){
-
-            var shadowMove = $('.visuals_wrap').height() - $(window).height(); 
             var shadowMoveFixed= $('.visuals_wrap').height() - 400;
             if(window.scrollY >= shadowMove) {
               $('.shadow').css('position', 'absolute');
@@ -498,10 +756,44 @@
 
             if(window.scrollY >= visualHeight - $('.city_tab').height()) {
               $('.city_tab').addClass('fixed');
+              $('.top_shadow').addClass('fixed');
             } else {
               $('.city_tab').removeClass('fixed');
+              $('.top_shadow').removeClass('fixed');
             }
+
+            if($(window).innerWidth() <= $(window).innerHeight()) {
+              $('.shadow').css('top', $('.visuals_wrap').height() - 264 +'px');
+            }
+        });
+
+
+        $(window).on('resize', function(){
+          swiper.update();
+          var visualHeight = $('.visuals_wrap').height();  
+          // 모바일의 경우 $(window).height() 가 아닌 visual height값으로 진행.
+          var bottomShadow = $(window).height() - 400;
+            $('.shadow').css('top', bottomShadow+'px');
+            window.addEventListener('scroll', function(){
+
+              var shadowMove = $('.visuals_wrap').height() - $(window).height(); 
+              var shadowMoveFixed= $('.visuals_wrap').height() - 400;
+              if(window.scrollY >= shadowMove) {
+                $('.shadow').css('position', 'absolute');
+                $('.shadow').css('top', shadowMoveFixed+'px');
+              } else {
+                $('.shadow').css('position', 'fixed');
+                $('.shadow').css('top', bottomShadow+'px');
+              }
+
+              if(window.scrollY >= visualHeight - $('.city_tab').height()) {
+                $('.city_tab').addClass('fixed');
+              } else {
+                $('.city_tab').removeClass('fixed');
+              }
           });
+
+          
         });
  
         var swiper = new Swiper(".svt_follow_wrap", {
@@ -521,31 +813,41 @@
               var indexNum = this.realIndex + 1;
                 $(".other-city .link__alpha").removeClass('current');
                 $('.other-city .link__alpha:nth-child('+indexNum+')').addClass('current');
+
+                $(".mo_city_tab .link__alpha").removeClass('current');
+                $('.mo_city_tab .link__alpha:nth-child('+indexNum+')').addClass('current');
+
                 $('.other-city a').css('pointer-events', 'none');
                 $("body").removeAttr('class');
                 $(".visuals .vi").css('opacity', '0');
 
                 $(".city_tab .link__alpha").removeClass('current');
-          
+                $(".mo_city_tab .link__alpha").removeClass('current');
+
                 if(indexNum == '3') {
                   $("body").attr('class', 'section_main');
                   $(".city_tab .link__alpha:nth-child(3)").addClass('current');
+                  $(".mo_city_tab .link__alpha:nth-child(3)").addClass('current');
                 } else if(indexNum == '1') {
                   $("body").attr('class', 'section_tokyo');
                   $(".visuals .v2").css('opacity', '1');
                   $(".city_tab .link__alpha:nth-child(1)").addClass('current');
+                  $(".mo_city_tab .link__alpha:nth-child(1)").addClass('current');
                 } else if(indexNum == '2') {
                   $("body").attr('class', 'section_aichi');
                   $(".visuals .v3").css('opacity', '1');
                   $(".city_tab .link__alpha:nth-child(2)").addClass('current');
+                  $(".mo_city_tab .link__alpha:nth-child(2)").addClass('current');
                 } else if(indexNum == '4') {
                   $("body").attr('class', 'section_osaka');
                   $(".visuals .v4").css('opacity', '1');
                   $(".city_tab .link__alpha:nth-child(4)").addClass('current');
+                  $(".mo_city_tab .link__alpha:nth-child(4)").addClass('current');
                 } else if(indexNum == '5') {
                   $("body").attr('class', 'section_fukuoka');
                   $(".visuals .v5").css('opacity', '1');
                   $(".city_tab .link__alpha:nth-child(5)").addClass('current');
+                  $(".mo_city_tab .link__alpha:nth-child(5)").addClass('current');
                 }
             },
             slideChangeTransitionEnd: function () {
@@ -555,7 +857,6 @@
         });
   
         var fv = $('.swiper-wrapper').height();
-        // console.log(fv)
         $(".que").click(function() {
           $(this).next(".anw").stop().slideToggle(400);
           $(this).toggleClass('on').siblings().removeClass('on');
@@ -568,10 +869,14 @@
           $(".city_tab .link__alpha").removeClass('current');
           $(this).addClass('current');
         });
-  
-        $(window).on('resize', function(){
-          swiper.update();
+        $(".mo_city_tab .link__alpha").click(function() {
+          $(".mo_city_tab .link__alpha").removeClass('current');
+          $(this).addClass('current');
         });
+  
+        // $(window).on('resize', function(){
+        //   swiper.update();
+        // });
   
         for(var i=1; i<=$('.test_wrap .index li').length; i++) {
             var g = $('.test_wrap .index li:nth-child('+i+')> div:last-child p').attr('data-target');
@@ -592,6 +897,39 @@
             var g = $('.test_wrap4 .index li:nth-child('+i+')> div:last-child p').attr('data-target');
             $('.test_wrap4 .index li:nth-child('+i+')> div:last-child p').css('width', g+'%');
         }
+
+
+
+        function goSc(target) {
+          var hash = target
+          var cityType = hash.split('-');
+          if(cityType[0] == '#c1') {
+            swiper.slideTo((0), (1000), true);
+            setTimeout(() => 
+            $("html, body").animate({scrollTop: $('#c1-'+cityType[1]).offset().top - $('.city_tab').outerHeight()},400)
+            , 1000);
+
+          } else if(cityType[0] == '#c2') {
+            swiper.slideTo((1), (1000), true);
+            setTimeout(() => 
+            $("html, body").animate({scrollTop: $('#c2-'+cityType[1]).offset().top - $('.city_tab').outerHeight()},400)
+            , 1000);
+
+          } else if(cityType[0] == '#c4') {
+            swiper.slideTo((3), (1000), true);
+            setTimeout(() => 
+            $("html, body").animate({scrollTop: $('#c4-'+cityType[1]).offset().top - $('.city_tab').outerHeight()},400)
+            , 1000);
+
+          } else if(cityType[0] == '#c5') {
+            swiper.slideTo((4), (1000), true);
+            setTimeout(() => 
+            $("html, body").animate({scrollTop: $('#c5-'+cityType[1]).offset().top - $('.city_tab').outerHeight()},400)
+            , 1000);
+
+          }
+        }
+        
       </script>
 </body>
 </html>
