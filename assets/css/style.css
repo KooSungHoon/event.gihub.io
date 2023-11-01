@@ -181,10 +181,11 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 .store_list li a > div p.soon {background: #282828; color: #fff; width: 54px; height: 28px; text-align: center;}
 .store_list li a > div span b {margin-left: 5px; font-family: 'Pretendard-Thin'; font-size: 14px; opacity: 0.6;}
 
-.info_card_wrap.pb123 + .info_card_wrap {position: relative; background: #201E1E;}
-.info_card_wrap.pb123 + .info_card_wrap:after {position: absolute; content: ''; top: -160px; left: 50%; width: 100vw; height: 2382px; transform: translateX(-50%); background: #201E1E; z-index: -2;}
-.info_card_wrap.pb123 + .info_card_wrap:before {position: absolute; content: ''; top: -160px; left: 50%; width: 100vw; height: 380px; transform: translateX(-50%); background: url('../images/rally_shadow.png'); z-index: 0;}
-
+.info_card_wrap.pb123 + .info_card_wrap {position: relative; background: #343434;}
+.info_card_wrap.pb123 + .info_card_wrap:after {position: absolute; content: ''; top: -160px; left: 50%; width: 100vw; height: 2382px; transform: translateX(-50%); background: #343434; z-index: -2;}
+.info_card_wrap.pb123 + .info_card_wrap:before {position: absolute; content: ''; top: -160px; left: 50%; width: 100vw; height: 240px; transform: translateX(-50%); background: url('../images/rally_shadow.png'); z-index: 0;}
+.rally_shadow {position: relative;}
+.rally_shadow:before {position: absolute; content: ''; top: -200px; left: 50%; width: 100vw; height: 240px; transform: translateX(-50%); background: url('../images/rally_shadow2.png'); z-index: -1;}
 @media (min-width: 2160px) {
 	body.section_tokyo .shadow, 
 	body.section_aichi .shadow, 
@@ -250,10 +251,10 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 	.sec_title p {font-size: 13px; padding: 0; margin-top: 16px;}
 	.info_card_wrap:not(.pb123) {gap: 16px; margin-bottom: 0; padding-bottom: 60px;}
 
-	.info_card_wrap.pb123 + .info_card_wrap {position: relative; background: #201E1E;}
-	.info_card_wrap.pb123 + .info_card_wrap:after {position: absolute; top: -160px; left: 50%; width: 100vw; height: 0; transform: translateX(-50%); background: #201E1E; z-index: -2;}
-	.info_card_wrap.pb123 + .info_card_wrap:before {position: absolute; top: -160px; left: 50%; width: 100vw; height: 380px; transform: translateX(-50%); background: url('../images/rally_shadow.png'); z-index: 0;}
-	
+	.info_card_wrap.pb123 + .info_card_wrap {position: relative; background: #343434;}
+	.info_card_wrap.pb123 + .info_card_wrap:after {position: absolute; top: -160px; left: 50%; width: 100vw; height: 0; transform: translateX(-50%); background: #343434; z-index: -2;}
+	.info_card_wrap.pb123 + .info_card_wrap:before {position: absolute; top: 0; left: 50%; width: 100vw; height: 240px; transform: translateX(-50%); background: url('../images/rally_shadow.png'); z-index: 0;}
+	.rally_shadow:before  {top: -120px; height: 120px; z-index: 1;}
 
 	.sch_title {background: #000; font-size: 26px; padding-bottom: 40px; margin-bottom: 0;}
 	.schedule_wrap {margin: 0 20px;} 
