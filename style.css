@@ -1,0 +1,289 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face{
+    font-family:'Flama';
+    src:url('../font/Flama_Regular.otf');
+}
+
+@font-face{
+    font-family:'Pretendard-Thin';
+    src:url('../font/PretendardJP-Thin.otf');
+}
+
+@font-face{
+    font-family:'Pretendard-Medium';
+    src:url('../font/PretendardJP-Medium.otf');
+}
+
+.pc {display: auto !important;}
+.mo {display: none !important;}
+
+
+img {width: 100%;}
+.mt0 {margin-top: 0 !important;}
+.mb0 {margin-bottom: 0 !important;}
+.pb123 {padding-bottom: 123px !important;}
+.pt0 {padding-top: 0 !important;}
+.pb0 {padding-bottom: 0 !important;}
+.a11yHidden {overflow: hidden; position: absolute; clip: rect(0, 0, 0, 0); clip-path: circle(0); width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap;}
+.wrap * {box-sizing: border-box;}
+.fl {display: flex;}
+.flex-c {flex-direction: column;}
+img {display: block;}
+.bi {position: fixed; width: 100%; top: 0; left: 0; z-index: 9;}
+.city_tab {transition: 0.6s; background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, #000 100%); align-items: center; justify-content: space-between; padding: 19px 0; font-family:'Flama'; color: #fff; font-size: 20px; width: 100%; position: fixed; top: 0; left: 0; z-index: 9;}
+.city_tab a {display: block; width: 100%; text-align: center;}
+.city_tab a img {width: 40px; margin: 0 auto;}
+.city_tab.fixed {position: fixed; top: 0; left: 0; width: 100%;}
+.link__alpha {position: relative; opacity: 0.6; cursor: pointer;}
+.link__alpha.current {opacity: 1;}
+/* .link__alpha.current:after {position: absolute; content: ''; border-bottom: 2px solid #fff; bottom: -24px; left: 0; width: 100%; height: 2px;} */
+
+.section_main .city_tab.fixed {background: #000;}
+.section_tokyo .city_tab.fixed {background: #0c1818;}
+.section_aichi .city_tab.fixed {background: #5895DB;}
+.section_osaka .city_tab.fixed {background: #FFA49C;}
+.section_fukuoka .city_tab.fixed {background: #ABA5A5;}
+
+body {transition: 0.6s;}
+body.section_main {background-color: #000;}
+body.section_tokyo {background-color: #0c1818;}
+body.section_aichi {background-color: #5895DB;}
+body.section_osaka {background-color: #FFA49C;}
+body.section_fukuoka {background-color: #ABA5A5;}
+
+
+.swiper-button-prev {transition: 0.4s; background: transparent; display: block; width: 10%; height: 100vh; top: 0; margin: 0; left: 0;}
+.swiper-button-prev:hover  {background: linear-gradient(270deg, transparent 75%, #000 100%);}
+
+.swiper-button-next {transition: 0.4s; background: transparent; display: block; width: 10%; height: 100vh; top: 0; margin: 0; right: 0;}
+.swiper-button-next:hover  {background: linear-gradient(90deg, transparent 75%,  #000 100%);}
+.swiper-button-next:after, .swiper-button-prev:after {content: '';}
+.vi {opacity: 0; transition: 0.6s;}
+.vi.v1 {opacity: 1;}
+.visuals_wrap {position: relative;}
+.visuals {position: absolute; width: 100%; top: 0; left: 0; z-index: 1;}
+.visuals img {position: absolute; width: 100%; top: 0; left: 0;}
+.inner {width: 100%; max-width: 944px; margin: 80px auto 0;}
+.sec_title {padding-top: 48px; margin-bottom: 48px; line-height: normal; text-align: center; display: block; font-family: 'Flama'; font-size: 40px;}
+.sec_title p {font-family:'Pretendard'; font-weight: 300; font-size: 17px; margin-top: 20px; word-break: keep-all; padding: 0px 30px;}
+.sch_title {margin-bottom: 80px; line-height: normal; text-align: center; display: block; font-family: 'Flama'; font-size: 40px;}
+#main_section {color: #fff;}
+#tokyo_section {color: #fff;}
+#aichi_section {color: #fff;}
+#fukuoka_section {color: #fff;}
+.shadow {z-index: 9; width: 100%; height: 400px; position: fixed; top: 100%; left: 0;}
+
+body.section_tokyo .shadow {background: url('../images/shadow1.png') no-repeat; background-size: 100%; background-position: bottom;}
+body.section_aichi .shadow {background: url('../images/shadow2.png') no-repeat; background-size: 100%; background-position: bottom;}
+body.section_main .shadow {background: url('../images/shadow3.png') no-repeat; background-size: 100%; background-position: bottom;}
+body.section_osaka .shadow {background: url('../images/shadow4.png') no-repeat; background-size: 100%; background-position: bottom;}
+body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat; background-size: 100%; background-position: bottom;}
+
+
+
+.shadow:after {position: absolute; content: ''; background: url('../images/follow.png') center no-repeat; background-size: 480px; width: 480px; height: 244px; top: 114px; left: 50%; transform: translateX(-50%);}
+.section_tokyo .shadow:after {background: url('../images/follow_tk.png') center no-repeat;}
+.section_aichi .shadow:after {background: url('../images/follow_ai.png') center no-repeat;}
+.section_osaka .shadow:after {background: url('../images/follow_os.png') center no-repeat;}
+.section_fukuoka .shadow:after {background: url('../images/follow_fk.png') center no-repeat;}
+
+.info_card_wrap {display: flex; gap: 32px; flex-direction: column; margin-bottom: 160px;}
+
+.schedule_wrap {border-top: 1px solid #ffffff3d; padding-bottom: 80px;}
+.que:first-child{border-top: 1px solid black;}
+.que {padding: 20px 0; position: relative; text-align: left; cursor: pointer; font-size: 14px; border-bottom: 1px solid #ffffff3d; transition: 0.8s;}
+.que .spot {margin-top: 20px; gap: 12px; align-items: center;}
+.que .spot a {margin-left: 4px; display: inline-block; font-weight: 600; color: #000; font-size: 16px; font-family: 'Pretendard-Medium'; background: #fff; border-radius: 100px; padding: 6px 12px; line-height: normal;}
+.que .spot a.spot_free {margin-left: 0; background: #5895DB;}
+.que > div strong {margin-bottom: 12px; min-width: 240px; color: #FFB3AB; font-family: 'Pretendard-Medium'; font-size: 28px; line-height: normal;}
+.que > div p {line-height: normal; display: flex; flex-direction: column; justify-content: space-between; color: #fff; opacity: 0.9; font-family: 'Pretendard-Medium'; font-size: 20px;}
+.que > div p.font16 {font-size: 16px; margin-bottom: 8px;}
+.que > div > span {opacity: 0.6; margin-top: 8px; display: block; font-family: 'Pretendard-Thin'; font-size: 14px;}
+/* .que.on {border-bottom: 1px solid transparent;} */
+.anw {display: none; text-align: left; overflow: hidden; font-size: 14px; padding-bottom: 40px; border-bottom: 1px solid #ffffff3d;}
+.arrow-wrap {position: absolute; top: 50%; right: 0; transform: translateY(-50%);}
+.que .arrow-top {display: none;}
+.que .arrow-bottom {display: block;}
+.que.on .arrow-bottom {display: none;}
+.que.on .arrow-top {display: block;}
+.mySwiper {background: #000;}
+.swiper-wrapper {transition: 0.4s;}
+
+.section_tokyo .info_card_wrap {margin-bottom: 80px;}
+.section_aichi .info_card_wrap {margin-bottom: 80px;}
+.section_osaka .info_card_wrap {margin-bottom: 80px;}
+.section_fukuoka .info_card_wrap {margin-bottom: 80px;}
+
+.sec_title.st {margin-bottom: 0;}
+.sec_title.st ul {justify-content: center; gap: 16px 24px; flex-wrap: wrap; width: 682px; margin: 24px auto 0;}
+.sec_title.st ul li {width: auto; color: rgba(255, 255, 255, 0.90); text-align: center; font-family: 'Pretendard-Medium'; font-size: 16px; font-style: normal; line-height: 24px;}
+
+/* .section_osaka .sec_title.st ul li {color: #000;} */
+.noti {margin-bottom: 80px;}
+.footer_info {max-width: 500px; width: 100%; margin: 0 auto 160px; display: flex; flex-direction: column; gap: 60px;}
+.footer_info span {color: rgba(255, 255, 255, 0.90); text-align: center; font-family: 'Pretendard-Medium'; font-size: 20px; font-style: normal; font-weight: 500; line-height: 29px; letter-spacing: 0.2px;}
+.footer_info p {line-height: 20.3px; margin-top: 12px; opacity: 0.8; font-family: 'Pretendard-Medium'; display: block; font-size: 14px; color: rgba(255, 255, 255, 0.80);}
+.footer_info a {text-decoration: none; color: rgba(255, 255, 255, 0.90);}
+.footer_info > div {text-align: center;}
+.footer_info > div img {width: 40px; display: block; margin: 0 auto 24px;}
+.footer_info > div span {display: block; color: rgba(255, 255, 255, 0.80); text-align: center; font-family: 'Pretendard-Thin'; font-size: 14px; font-style: normal; line-height: 20.3px; letter-spacing: 0.14px;}
+/* .section_osaka .footer_info * {color: #000;} */
+
+.store_list li {cursor: pointer; border-bottom: 1px solid #ffffff3d; padding: 16px 0;}
+.store_list li:last-child {border-bottom: 0;}
+.store_list li a {width: 100%; display: flex; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Pretendard-Medium';}
+.store_list li a > div {gap: 24px; display: flex; align-items: center;}
+.store_list li a > div p {font-size: 16px; color: #000; background: #fff; padding: 6px 12px; border-radius: 100px; font-family: 'Pretendard-Medium'; font-weight: 600;}
+.store_list li a > div p.free {background: #5895DB;}
+.store_list li a > div p.soon {background: #282828; color: #fff; width: 54px; height: 28px; text-align: center;}
+.store_list li a > div span b {margin-left: 5px; font-family: 'Pretendard-Thin'; font-size: 14px; opacity: 0.6;}
+
+.info_card_wrap.pb123 + .info_card_wrap {position: relative; background: #343434;}
+.info_card_wrap.pb123 + .info_card_wrap:after {position: absolute; content: ''; top: -160px; left: 50%; width: 100vw; height: 2382px; transform: translateX(-50%); background: #343434; z-index: -2;}
+.info_card_wrap.pb123 + .info_card_wrap:before {position: absolute; content: ''; top: -160px; left: 50%; width: 100vw; height: 240px; transform: translateX(-50%); background: url('../images/rally_shadow.png'); z-index: 0;}
+.rally_shadow {position: relative;}
+.rally_shadow:before {position: absolute; content: ''; top: -200px; left: 50%; width: 100vw; height: 240px; transform: translateX(-50%); background: url('../images/rally_shadow2.png'); z-index: -1;}
+@media (min-width: 2160px) {
+	body.section_tokyo .shadow, 
+	body.section_aichi .shadow, 
+	body.section_main .shadow, 
+	body.section_osaka .shadow, 
+	body.section_fukuoka .shadow {background-position: top;}
+}
+
+
+@media (max-width: 960px) {
+	.pc {display: none !important;}
+	.mo {display: block !important;}
+	.mo.line  {display: inline-block !important;}
+	.top_shadow {position: fixed; width: 100%; top: 0; left: 0; z-index: 999; padding: 12px 0; background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);}
+	body.section_tokyo .top_shadow {background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, #0c1818 100%);}
+	body.section_aichi .top_shadow {background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, #5895DB 100%);}
+	body.section_osaka .top_shadow {background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, #FFA49C 100%);}
+	body.section_fukuoka .top_shadow {background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, #ABA5A5 100%);}
+
+	.top_shadow.fixed {background: #000;}
+	body.section_tokyo .top_shadow.fixed {background: #0c1818;}
+	body.section_aichi .top_shadow.fixed {background: #5895DB;}
+	body.section_osaka .top_shadow.fixed {background: #FFA49C;}
+	body.section_fukuoka .top_shadow.fixed {background: #ABA5A5;}
+	
+	.top_shadow img {width: 32px; margin: 0 auto;}
+	.shadow:after {background-size: 100%; max-width: 288px; width: 76.8vw; top: auto; bottom: 0; background: url('../images/mo_follow.png') center no-repeat;}
+	.section_tokyo .shadow:after {background: url('../images/mo_follow_tk.png') center no-repeat;}
+	.section_aichi .shadow:after {background: url('../images/mo_follow_ai.png') center no-repeat;}
+	.section_osaka .shadow:after {background: url('../images/mo_follow_os.png') center no-repeat;}
+	.section_fukuoka .shadow:after {background: url('../images/mo_follow_fu.png') center no-repeat;}
+
+
+
+	.shadow {height: 264px;}
+	body.section_tokyo .shadow {background: url('../images/mo_shadow1.png') no-repeat; background-size: 100%; background-position: top;}
+	body.section_aichi .shadow {background: url('../images/mo_shadow2.png') no-repeat; background-size: 100%; background-position: top;}
+	body.section_main .shadow {background: url('../images/mo_shadow3.png') no-repeat; background-size: 100%; background-position: top;}
+	body.section_osaka .shadow {background: url('../images/mo_shadow4.png') no-repeat; background-size: 100%; background-position: top;}
+	body.section_fukuoka .shadow {background: url('../images/mo_shadow5.png') no-repeat; background-size: 100%; background-position: top;}
+
+	.sticky {position: sticky; top: 55px; left: 0; z-index: 999; background: #000; padding: 4px 0 16px 0;}
+	.section_tokyo .sticky {background: #0c1818;}
+	.section_aichi .sticky {background: #5895DB;}
+	.section_osaka .sticky {background: #FFA49C;}
+	.section_fukuoka .sticky {background: #ABA5A5;}
+
+	.mo_city_tab {-ms-overflow-style: none;}
+	.mo_city_tab::-webkit-scrollbar {display:none;}
+	.mo_city_tab {gap: 8px; overflow-x: auto;} 
+	.mo_city_tab a {border-radius: 100px; background: #343434; font-size: 14px; white-space: nowrap; padding: 10px 14px; color: #fff; font-family: 'Flama';}
+	.mo_city_tab a.current {background: #FFB0A8;}
+	.mo_city_tab a:first-child {margin-left: 16px;}
+	.mo_city_tab a:last-child {margin-right: 16px;}
+	.mo_city_tab .link__alpha {opacity: 1;}
+
+
+	.inner {margin: 32px auto 0; max-width: 100%;}
+	.section_main .inner {margin: 0 auto 0;}
+	.sec_title {font-size: 26px; margin-bottom: 52px;}
+	.info_card_wrap {padding: 0 20px;} 
+	.info_card_wrap.pb123 {background-color: #000; padding-top: 32px; margin-bottom: 0;}
+	.sec_title p {font-size: 13px; padding: 0; margin-top: 16px;}
+	.info_card_wrap:not(.pb123) {gap: 16px; margin-bottom: 0; padding-bottom: 60px;}
+
+	.info_card_wrap.pb123 + .info_card_wrap {position: relative; background: #343434;}
+	.info_card_wrap.pb123 + .info_card_wrap:after {position: absolute; top: -160px; left: 50%; width: 100vw; height: 0; transform: translateX(-50%); background: #343434; z-index: -2;}
+	.info_card_wrap.pb123 + .info_card_wrap:before {position: absolute; top: 0; left: 50%; width: 100vw; height: 240px; transform: translateX(-50%); background: url('../images/rally_shadow.png'); z-index: 0;}
+	.rally_shadow:before  {top: -120px; height: 120px; z-index: 1;}
+
+	.sch_title {background: #000; font-size: 26px; padding-bottom: 40px; margin-bottom: 0;}
+	.schedule_wrap {margin: 0 20px;} 
+
+	.que {padding: 24px 0 36px;}
+	.que > div strong {font-size: 22px;}
+	.que > div p.font16 {font-size: 18px;}
+	.que > div p:not(.font16) {font-size: 14px; opacity: 0.6; margin-top: 0; font-family: 'Pretendard-Thin';}
+	.que > div > span {font-size: 12px; line-height: normal;}
+	.que .spot {margin-top: 16px;}
+	.arrow-wrap {bottom: 36px; top: auto; transform: none;}
+	.que > div .spot {gap: 6px;}
+	.que > div .spot p {color: #fff; opacity: 1; font-family: 'Pretendard-Thin'; font-size: 14px;}
+	.que > div .spot p:first-child {margin-right: 6px; font-size: 18px; font-family: 'Pretendard-Medium';}
+	.que .spot a {margin-left: 6px; font-size: 14px;}
+	.store_list li a > div p.soon {height: auto; width: 53px;}
+	.store_list li a {flex-direction: column; align-items: start;}
+	.store_list li a > div {gap: 16px; width: 100%; align-items: start;}
+	.store_list li a > div p {font-size: 14px; padding: 11px 13px;}
+	.store_list li a > div span {width: calc(100% - 100px);}
+	.store_list li a > span {margin-left: 69px; margin-top: 4px;}
+	.mo.noti {padding: 0 20px;} 
+	.noti {margin-bottom: 60px;}
+	.sec_title.st ul {width: 100%; gap: 8px 0; flex-direction: column;}
+
+	.footer_info {gap: 40px; max-width: 100%; padding: 0 20px; margin: 0 auto 80px;}
+	.footer_info span {font-size: 16px; line-height: 23.2px; font-family: 'Pretendard-Thin';}
+	.footer_info p {font-size: 14px; opacity: 0.6;}
+	.footer_info > div span {font-size: 12px}
+	.store_list li a > div span b {display: block; margin: 6px 0; line-height: normal;}
+	.footer_info > div img {margin: 0 auto 16px;}
+}
