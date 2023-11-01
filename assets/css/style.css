@@ -189,9 +189,9 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 .rally_shadow:before {position: absolute; content: ''; top: -200px; left: 50%; width: 100vw; height: 240px; transform: translateX(-50%); background: url('../images/rally_shadow2.png'); z-index: -1;}
 @media (min-width: 2160px) {
 	body.section_tokyo .shadow, 
-	body.section_aichi .shadow, 
+	/* body.section_aichi .shadow,  */
 	body.section_main .shadow, 
-	body.section_osaka .shadow, 
+	/* body.section_osaka .shadow,  */
 	body.section_fukuoka .shadow {background-position: top;}
 }
 
