@@ -1023,14 +1023,14 @@
 
     <script>
         AOS.init();
-        var mobileWidth = 960;
         var visualHeight = $('.visuals_wrap').height();  
         var bottomShadow = $(window).height() - 400;
         $('.shadow').css('top', bottomShadow+'px');
         
         
-        if($(window).innerWidth() <= mobileWidth) {
-          setTimeout(() => $('.shadow').css('top', $('.visuals_wrap').height() - 244 +'px'), 1000);
+        if($(window).innerWidth() <= $(window).innerHeight()) {
+          $('.shadow').css('top', $('.visuals_wrap').height() - $('.shadow').height() +'px')
+          // setTimeout(() => , 1000);
         }
         
         
@@ -1053,9 +1053,9 @@
             }
 
             // mobile top shadow
-            if($(window).innerWidth() <= mobileWidth) {
+            if($(window).innerWidth() <= $(window).innerHeight()) {
               $('.shadow').css('position', 'absolute')
-              $('.shadow').css('top', $('.visuals_wrap').height() - 244 +'px');
+              $('.shadow').css('top', $('.visuals_wrap').height() - $('.shadow').height() +'px');
               if(window.scrollY >= $('.visuals_wrap').height()) {
                 $('.top_shadow').addClass('fixed');
               } else {
