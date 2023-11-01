@@ -118,17 +118,18 @@ body.section_fukuoka {background-color: #ABA5A5;}
 
 body.section_tokyo .shadow {background: url('../images/shadow1.png') no-repeat; background-size: 100%; background-position: bottom;}
 body.section_aichi .shadow {background: url('../images/shadow2.png') no-repeat; background-size: 100%; background-position: bottom;}
-body.section_main .shadow {background: url('../images/shadow3.png') no-repeat; background-size: 100%; background-position: bottom;}
+/* body.section_main .shadow {background: url('../images/shadow3.png') no-repeat; background-size: 100%; background-position: bottom;} */
+body.section_main .shadow {display: none;}
 body.section_osaka .shadow {background: url('../images/shadow4.png') no-repeat; background-size: 100%; background-position: bottom;}
 body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat; background-size: 100%; background-position: bottom;}
 
 
 
 .shadow:after {position: absolute; content: ''; background: url('../images/follow.png') center no-repeat; background-size: 480px; width: 480px; height: 244px; top: 114px; left: 50%; transform: translateX(-50%);}
-.section_tokyo .shadow:after {background: url('../images/follow_tk.png') center no-repeat;}
-.section_aichi .shadow:after {background: url('../images/follow_ai.png') center no-repeat;}
-.section_osaka .shadow:after {background: url('../images/follow_os.png') center no-repeat;}
-.section_fukuoka .shadow:after {background: url('../images/follow_fk.png') center no-repeat;}
+.section_tokyo .shadow:after {background: url('../images/follow_tk.png') center no-repeat; background-size: 90%;}
+.section_aichi .shadow:after {background: url('../images/follow_ai.png') center no-repeat; background-size: 90%;}
+.section_osaka .shadow:after {background: url('../images/follow_os.png') center no-repeat; background-size: 90%;}
+.section_fukuoka .shadow:after {background: url('../images/follow_fk.png') center no-repeat; background-size: 90%;}
 
 .info_card_wrap {display: flex; gap: 32px; flex-direction: column; margin-bottom: 160px;}
 
