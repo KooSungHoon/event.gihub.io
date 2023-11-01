@@ -1030,9 +1030,8 @@
         
         if($(window).innerWidth() <= $(window).innerHeight()) {
           // $('.shadow').css('top', $('.visuals_wrap').height() - $('.shadow').height() +'px')
-          // setTimeout(() => , 1000);
-          $('.shadow').css('position', 'absolute');
-          $('.shadow').css('top', $('.visuals_wrap').height() - $('.shadow').height() +'px');
+          setTimeout(() => $('.shadow').css('position', 'absolute'),
+          $('.shadow').css('top', $('.visuals_wrap').height() - $('.shadow').height() +'px'), 1000);
         }
         
         
