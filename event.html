@@ -1037,6 +1037,7 @@
 
     <script>
         AOS.init();
+        $(".visuals_wrap .v1").css('opacity', '1');
         var visualHeight = $('.visuals_wrap').height();  
         var bottomShadow = $(window).height() - 400;
         
@@ -1139,13 +1140,14 @@
 
                 $('.other-city a').css('pointer-events', 'none');
                 $("body").removeAttr('class');
-                $(".visuals .vi").css('opacity', '0');
-
+                $(".vi").css('opacity', '0');
+                
                 $(".city_tab .link__alpha").removeClass('current');
                 $(".mo_city_tab .link__alpha").removeClass('current');
 
                 if(indexNum == '3') {
                   $("body").attr('class', 'section_main');
+                  $(".visuals_wrap .v1").css('opacity', '1');
                   $(".city_tab .link__alpha:nth-child(3)").addClass('current');
                   $(".mo_city_tab .link__alpha:nth-child(3)").addClass('current');
                 } else if(indexNum == '1') {
