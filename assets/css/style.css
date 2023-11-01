@@ -110,7 +110,7 @@ body.section_fukuoka {background-color: #ABA5A5;}
 .sec_title {padding-top: 48px; margin-bottom: 48px; line-height: normal; text-align: center; display: block; font-family: 'Flama'; font-size: 40px;}
 .sec_title p {font-family:'Pretendard'; font-weight: 300; font-size: 17px; margin-top: 20px; word-break: keep-all; padding: 0px 30px;}
 .sch_title {margin-bottom: 80px; line-height: normal; text-align: center; display: block; font-family: 'Flama'; font-size: 40px;}
-#main_section {color: #fff;}
+#main_section {color: #fff; overflow: hidden;}
 #tokyo_section {color: #fff;}
 #aichi_section {color: #fff;}
 #fukuoka_section {color: #fff;}
@@ -253,7 +253,7 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 	.info_card_wrap:not(.pb123) {gap: 16px; margin-bottom: 0; padding-bottom: 60px;}
 
 	.info_card_wrap.pb123 + .info_card_wrap {position: relative; background: #343434;}
-	.info_card_wrap.pb123 + .info_card_wrap:after {position: absolute; top: -160px; left: 50%; width: 100vw; height: 0; transform: translateX(-50%); background: #343434; z-index: -2;}
+	.info_card_wrap.pb123 + .info_card_wrap:after {position: absolute; top: 0; left: 50%; width: 100vw; height: 0; transform: translateX(-50%); background: #343434; z-index: -2;}
 	.info_card_wrap.pb123 + .info_card_wrap:before {position: absolute; top: 0; left: 50%; width: 100vw; height: 240px; transform: translateX(-50%); background: url('../images/rally_shadow.png'); z-index: 0;}
 	.rally_shadow:before  {top: -120px; height: 120px; z-index: 1;}
 
