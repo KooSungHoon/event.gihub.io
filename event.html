@@ -1025,13 +1025,16 @@
         AOS.init();
         var visualHeight = $('.visuals_wrap').height();  
         var bottomShadow = $(window).height() - 400;
-        $('.shadow').css('top', bottomShadow+'px');
         
+        if($(window).innerWidth() > $(window).innerHeight()) {
+          $('.shadow').css('top', bottomShadow+'px');  
+        }
         
         if($(window).innerWidth() <= $(window).innerHeight()) {
           // $('.shadow').css('top', $('.visuals_wrap').height() - $('.shadow').height() +'px')
-          setTimeout(() => $('.shadow').css('position', 'absolute'),
-          $('.shadow').css('top', $('.visuals_wrap').height() - $('.shadow').height() +'px'), 1000);
+          // setTimeout(() => , 1000);
+          $('.shadow').css('position', 'absolute');
+          $('.shadow').css('top', visualHeight - $('.shadow').height() +'px');
         }
         
         
