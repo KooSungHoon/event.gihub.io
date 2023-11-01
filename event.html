@@ -1029,8 +1029,10 @@
         
         
         if($(window).innerWidth() <= $(window).innerHeight()) {
-          $('.shadow').css('top', $('.visuals_wrap').height() - $('.shadow').height() +'px')
+          // $('.shadow').css('top', $('.visuals_wrap').height() - $('.shadow').height() +'px')
           // setTimeout(() => , 1000);
+          $('.shadow').css('position', 'absolute');
+          $('.shadow').css('top', $('.visuals_wrap').height() - $('.shadow').height() +'px');
         }
         
         
