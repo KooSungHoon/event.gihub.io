@@ -178,7 +178,12 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 .store_list li a > div {gap: 24px; display: flex; align-items: center;}
 .store_list li a > div p {font-size: 16px; color: #000; background: #fff; padding: 6px 12px; border-radius: 100px; font-family: 'Pretendard-Medium'; font-weight: 600;}
 .store_list li a > div p.free {background: #5895DB;}
+.store_list li a > div p.soon {background: #282828; color: #fff; width: 54px; height: 28px; text-align: center;}
 .store_list li a > div span b {margin-left: 5px; font-family: 'Pretendard-Thin'; font-size: 14px; opacity: 0.6;}
+
+.info_card_wrap.pb123 + .info_card_wrap {position: relative; background: #201E1E;}
+.info_card_wrap.pb123 + .info_card_wrap:after {position: absolute; content: ''; top: -160px; left: 50%; width: 100vw; height: 2382px; transform: translateX(-50%); background: #201E1E; z-index: -2;}
+.info_card_wrap.pb123 + .info_card_wrap:before {position: absolute; content: ''; top: -160px; left: 50%; width: 100vw; height: 380px; transform: translateX(-50%); background: url('../images/rally_shadow.png'); z-index: 0;}
 
 @media (min-width: 2160px) {
 	body.section_tokyo .shadow, 
@@ -215,13 +220,13 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 
 
 	.shadow {height: 264px;}
-	body.section_tokyo .shadow {background: url('../images/mo_shadow1.png') no-repeat; background-size: 100%; background-position: bottom;}
-	body.section_aichi .shadow {background: url('../images/mo_shadow2.png') no-repeat; background-size: 100%; background-position: bottom;}
-	body.section_main .shadow {background: url('../images/mo_shadow3.png') no-repeat; background-size: 100%; background-position: bottom;}
-	body.section_osaka .shadow {background: url('../images/mo_shadow4.png') no-repeat; background-size: 100%; background-position: bottom;}
-	body.section_fukuoka .shadow {background: url('../images/mo_shadow5.png') no-repeat; background-size: 100%; background-position: bottom;}
+	body.section_tokyo .shadow {background: url('../images/mo_shadow1.png') no-repeat; background-size: 100%; background-position: top;}
+	body.section_aichi .shadow {background: url('../images/mo_shadow2.png') no-repeat; background-size: 100%; background-position: top;}
+	body.section_main .shadow {background: url('../images/mo_shadow3.png') no-repeat; background-size: 100%; background-position: top;}
+	body.section_osaka .shadow {background: url('../images/mo_shadow4.png') no-repeat; background-size: 100%; background-position: top;}
+	body.section_fukuoka .shadow {background: url('../images/mo_shadow5.png') no-repeat; background-size: 100%; background-position: top;}
 
-	.sticky {position: sticky; top: 56px; left: 0; z-index: 999; background: #000; padding: 4px 0 16px 0;}
+	.sticky {position: sticky; top: 55px; left: 0; z-index: 999; background: #000; padding: 4px 0 16px 0;}
 	.section_tokyo .sticky {background: #0c1818;}
 	.section_aichi .sticky {background: #5895DB;}
 	.section_osaka .sticky {background: #FFA49C;}
@@ -240,11 +245,15 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 	.inner {margin: 32px auto 0; max-width: 100%;}
 	.section_main .inner {margin: 0 auto 0;}
 	.sec_title {font-size: 26px; margin-bottom: 52px;}
-	.info_card_wrap {padding: 0 20px; background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 130%);} 
+	.info_card_wrap {padding: 0 20px;} 
 	.info_card_wrap.pb123 {background-color: #000; padding-top: 32px; margin-bottom: 0;}
-
 	.sec_title p {font-size: 13px; padding: 0; margin-top: 16px;}
-	.info_card_wrap:not(.pb123) {gap: 16px; margin-bottom: 0; padding-bottom: 80px;}
+	.info_card_wrap:not(.pb123) {gap: 16px; margin-bottom: 0; padding-bottom: 60px;}
+
+	.info_card_wrap.pb123 + .info_card_wrap {position: relative; background: #201E1E;}
+	.info_card_wrap.pb123 + .info_card_wrap:after {position: absolute; top: -160px; left: 50%; width: 100vw; height: 0; transform: translateX(-50%); background: #201E1E; z-index: -2;}
+	.info_card_wrap.pb123 + .info_card_wrap:before {position: absolute; top: -160px; left: 50%; width: 100vw; height: 380px; transform: translateX(-50%); background: url('../images/rally_shadow.png'); z-index: 0;}
+	
 
 	.sch_title {background: #000; font-size: 26px; padding-bottom: 40px; margin-bottom: 0;}
 	.schedule_wrap {margin: 0 20px;} 
@@ -260,15 +269,15 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 	.que > div .spot p {color: #fff; opacity: 1; font-family: 'Pretendard-Thin'; font-size: 14px;}
 	.que > div .spot p:first-child {margin-right: 6px; font-size: 18px; font-family: 'Pretendard-Medium';}
 	.que .spot a {margin-left: 6px; font-size: 14px;}
-	
+	.store_list li a > div p.soon {height: auto; width: 53px;}
 	.store_list li a {flex-direction: column; align-items: start;}
 	.store_list li a > div {gap: 16px; width: 100%; align-items: start;}
 	.store_list li a > div p {font-size: 14px; padding: 11px 13px;}
 	.store_list li a > div span {width: calc(100% - 100px);}
 	.store_list li a > span {margin-left: 69px; margin-top: 4px;}
-
 	.mo.noti {padding: 0 20px;} 
-	.noti {margin-bottom: 40px;}
+	.noti {margin-bottom: 60px;}
+	.sec_title.st ul {width: 100%; gap: 8px 0; flex-direction: column;}
 
 	.footer_info {gap: 40px; max-width: 100%; padding: 0 20px; margin: 0 auto 80px;}
 	.footer_info span {font-size: 16px; line-height: 23.2px; font-family: 'Pretendard-Thin';}
