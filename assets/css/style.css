@@ -102,7 +102,7 @@ body.section_fukuoka {background-color: #ABA5A5;}
 .swiper-button-next:hover  {background: linear-gradient(90deg, transparent 75%,  #000 100%);}
 .swiper-button-next:after, .swiper-button-prev:after {content: '';}
 .vi {opacity: 0; transition: 0.6s;}
-.vi.v1 {opacity: 1;}
+/* .vi.v1 {opacity: 1;} */
 .visuals_wrap {position: relative;}
 .visuals {position: absolute; width: 100%; top: 0; left: 0; z-index: 1;}
 .visuals img {position: absolute; width: 100%; top: 0; left: 0;}
