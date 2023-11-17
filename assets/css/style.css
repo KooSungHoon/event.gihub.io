@@ -183,7 +183,7 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 .store_list li a > div span b {margin-left: 5px; font-family: 'Pretendard-Thin'; font-size: 14px; opacity: 0.6;}
 
 .info_card_wrap.pb123 + .info_card_wrap {position: relative; background: #343434;}
-.info_card_wrap.pb123 + .info_card_wrap:after {position: absolute; content: ''; top: -160px; left: 50%; width: 100vw; height: 2382px; transform: translateX(-50%); background: #343434; z-index: -2;}
+.info_card_wrap.pb123 + .info_card_wrap:after {position: absolute; content: ''; top: -90px; left: 50%; width: 100vw; height: 2382px; transform: translateX(-50%); background: #343434; z-index: -2;}
 .info_card_wrap.pb123 + .info_card_wrap:before {position: absolute; content: ''; top: -160px; left: 50%; width: 100vw; height: 240px; transform: translateX(-50%); background: url('../images/rally_shadow.png'); z-index: 0;}
 .rally_shadow {position: relative;}
 .rally_shadow:before {position: absolute; content: ''; top: -240px; left: 50%; width: 100vw; height: 240px; transform: translateX(-50%); background: url('../images/rally_shadow2.png'); z-index: -1;}
