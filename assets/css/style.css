@@ -249,7 +249,7 @@ body.section_fukuoka .shadow {background: url('../images/shadow5.png') no-repeat
 	.sec_title {font-size: 26px; margin-bottom: 52px;}
 	.info_card_wrap {padding: 0 20px;} 
 	.info_card_wrap.pb123 {background-color: #000; padding-top: 32px; margin-bottom: 0;}
-	.sec_title p {font-size: 13px; padding: 0; margin-top: 16px;}
+	.sec_title p {font-size: 13px; padding: 0; margin-top: 16px; word-break: keep-all;}
 	.info_card_wrap:not(.pb123) {gap: 16px; margin-bottom: 0; padding-bottom: 60px;}
 
 	.info_card_wrap.pb123 + .info_card_wrap {position: relative; background: #343434;}
