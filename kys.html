@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARRY ME</title>
+    <link rel="icon" href="images/favi.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/ScrollTrigger.js"></script>
+    <script src="js/smooth-scrollbar.js"></script>
+</head>
+<style>
+  .choice {display: flex; align-items: center; height: 100vh; background: #332F2F; justify-content: center;}
+</style>
+<body>
+    <div class="scroller">
+        <audio id="" autoplay loop src="assets/images/kys/kys_bgm.mp3"></audio>
+        
+        <section class="hormarq">
+            <div class="gallery">
+                <div class="col">
+                  <div class="image">
+                    <img src="assets/images/kys/1.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/kys/4.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/kys/5.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/kys/6.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/kys/7.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="image">
+                    <img src="assets/images/kys/8.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/kys/9.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/kys/10.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/kys/11.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/kys/12.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/kys/13.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="image">
+                    <img src="assets/images/kys/14.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/kys/15.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/kys/16.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/kys/17.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/kys/18.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+        </section>
+
+        <section class="section9">
+            <div class="history">
+              <img style="width: 100vw;" src="assets/images/kys/20.jpg">  
+            </div>
+        </section>
+
+        <section class="section6">
+          <div class="history">
+            <img style="width: 100vw;" src="assets/images/kys/21.jpg">  
+          </div>
+      </section>
+
+      <section class="section7">
+        <div class="history">
+          <img style="width: 100vw;" src="assets/images/kys/19.jpg">  
+        </div>
+    </section>
+
+    <section class="section8">
+      <div class="history" style="position: relative;">
+        <img style="width: 100vw;" src="assets/images/kys/2,3.png">
+        <div style="position: absolute; top: 15%; left: 45%; transform: translateX(-50%); width: 12%;">
+          <a class="box" style="cursor: pointer;" onclick="window.close();"><img src="assets/images/kys/no.png"></a>
+        </div>
+        <div style="position: absolute; top: 9%; left: 87%; transform: translateX(-50%); width: 15%;">
+          <a class="box" style="cursor: pointer;" onclick="yesLogic();"><img src="assets/images/kys/yes.png"></a>
+        </div>
+      </div>
+
+      <div class="choice" style="display: none;">
+        <div>
+          <a><img src="assets/images/kys/Group 8.png"></a>
+        </div>
+          
+      </div>
+  </section>
+
+
+    </div>
+    <script src="js/main2.js"></script>
+</body>
+</html>
