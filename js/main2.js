@@ -1,5 +1,9 @@
 
-init();
+function play() {
+    (document.getElementById("touch").style.display = "none"), document.getElementById("bgm").play(),init();;
+    $('.kakao').hide();
+}
+
 function init() {
     const t = { val: 0 };
     let o,
