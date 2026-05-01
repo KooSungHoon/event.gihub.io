@@ -63,22 +63,28 @@ $(function () {
       $("#endTime").focus();
   });
 
-  function adjustBottomBox() {
-    const box = document.querySelector(".bottom-fixed-box");
+  const resultBox = document.querySelector(".result-box");
+  const initialHeight = window.visualViewport
+    ? window.visualViewport.height
+    : window.innerHeight;
+  function adjustForKeyboard() {
     if (!window.visualViewport) return;
-    const viewportHeight = window.visualViewport.height;
-    const windowHeight = window.innerHeight;
-    const keyboardHeight = windowHeight - viewportHeight;
-    if (keyboardHeight > 100) {
-      box.style.transform = `translateY(-${keyboardHeight}px)`;
+    const currentHeight = window.visualViewport.height;
+    const keyboardHeight = initialHeight - currentHeight;
+    if (keyboardHeight > 120) {
+      resultBox.style.bottom = (keyboardHeight + 20) + "px";
     } else {
-      box.style.transform = "translateY(0)";
+      resultBox.style.bottom = "30px";
     }
   }
   if (window.visualViewport) {
-    window.visualViewport.addEventListener("resize", adjustBottomBox);
+    window.visualViewport.addEventListener("resize", adjustForKeyboard);
   }
-  window.addEventListener("resize", adjustBottomBox);
+  document.addEventListener("focusout", () => {
+    setTimeout(() => {
+      resultBox.style.bottom = "30px";
+    }, 150);
+  });
 
 });
 
