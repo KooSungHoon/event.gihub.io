@@ -28,7 +28,7 @@ h2 {font-size: 22px; font-weight: bold; text-align: center; margin-bottom: 52px;
 .field {margin-bottom: 32px;}
 label {display: block; margin-bottom: 8px; font-weight: bold;}
 input.time-input {width: 100%; padding: 14px; font-size: 22px; border: 1px solid #d1d5db; border-radius: 12px; text-align: center; letter-spacing: 2px;}
-.result-box {position: fixed; transition: transform 0.25s ease; bottom: 30px; left: 50%; transform: translateX(-50%); max-width: 720px; width: calc(100% - 60px); padding: 18px; background: #f9fafb; border-radius: 14px; text-align: center; box-shadow: 0 0px 10px 0px #0000004d;}
+.result-box {position: fixed; transition: bottom 0.25s ease; bottom: 30px; left: 50%; transform: translateX(-50%); max-width: 720px; width: calc(100% - 60px); padding: 18px; background: #f9fafb; border-radius: 14px; text-align: center; box-shadow: 0 0px 10px 0px #0000004d;}
 .result-time {width: calc(100% - 60px); font-size: 28px; font-weight: bold; color: #2563eb;}
 .sub-text {margin-top: 8px; font-size: 13px; color: #6b7280;}
 .result-wrap {display: flex; align-items: center; justify-content: space-between;}
