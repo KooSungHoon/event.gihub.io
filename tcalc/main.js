@@ -67,23 +67,41 @@ $(function () {
   const initialHeight = window.visualViewport
     ? window.visualViewport.height
     : window.innerHeight;
+  let keyboardVisible = false;
   function adjustForKeyboard() {
     if (!window.visualViewport) return;
     const currentHeight = window.visualViewport.height;
     const keyboardHeight = initialHeight - currentHeight;
-    if (keyboardHeight > 120) {
-      resultBox.style.bottom = (keyboardHeight + 20) + "px";
-    } else {
+    const activeEl = document.activeElement;
+    const isInputFocused =
+      activeEl &&
+      (activeEl.tagName === "INPUT" || activeEl.tagName === "TEXTAREA");
+    if (keyboardHeight > 120 || isInputFocused) {
+      keyboardVisible = true;
+      const moveHeight = keyboardHeight > 120 ? keyboardHeight : 300;
+      resultBox.style.bottom = (moveHeight + 20) + "px";
+    } else if (!isInputFocused) {
+      keyboardVisible = false;
       resultBox.style.bottom = "30px";
     }
   }
   if (window.visualViewport) {
     window.visualViewport.addEventListener("resize", adjustForKeyboard);
   }
+  document.addEventListener("focusin", () => {
+    setTimeout(adjustForKeyboard, 50);
+  });
   document.addEventListener("focusout", () => {
     setTimeout(() => {
-      resultBox.style.bottom = "30px";
-    }, 150);
+      const activeEl = document.activeElement;
+      const stillFocused =
+        activeEl &&
+        (activeEl.tagName === "INPUT" || activeEl.tagName === "TEXTAREA");
+
+      if (!stillFocused) {
+        resultBox.style.bottom = "30px";
+      }
+    }, 200);
   });
 
 });
