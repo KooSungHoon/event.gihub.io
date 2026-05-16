@@ -4,31 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Time Calculator</title>
-  <link rel="stylesheet" href="../tcalc/main.css?260503">
-  <script src="../tcalc/jquery.js"></script>
-  <script src="../tcalc/main.js?260503"></script>
 
-  <link rel="icon" href="../tcalc/favi.jpg">
-  <link rel="apple-touch-icon" href="../tcalc/favi.jpg">
+  <link rel="stylesheet" href="./main.css">
+  <script src="./jquery.js"></script>
+  <script src="./main.js"></script>
+
+  <link rel="icon" href="./favi.jpg">
+  <link rel="apple-touch-icon" href="./favi.jpg">
 </head>
 <body>
 
 <div class="container">
   <h2>Time Calculator ⏱️</h2>
+
   <div class="field">
     <label for="endTime">종료시간</label>
-    <input type="numeric" inputmode="numeric" autocomplete="off" class="time-input" id="endTime" placeholder="종료시간을 입력해주세요">
+    <input type="text" inputmode="numeric" autocomplete="off" class="time-input" id="endTime" placeholder="종료시간을 입력해주세요">
   </div>
+
   <div class="field">
     <label for="reqTime">요청시간</label>
-    <input type="numeric" inputmode="numeric" autocomplete="off" class="time-input" id="reqTime" placeholder="요청시간을 입력해주세요">
+    <input type="text" inputmode="numeric" autocomplete="off" class="time-input" id="reqTime" placeholder="요청시간을 입력해주세요">
   </div>
+
   <div class="result-box">
     <div class="result-wrap">
-        <div class="result-time" id="resultText">--:--</div>
-        <button id="resetBtn">리셋</button>
+      <div class="result-time-group">
+        <div class="result-item">
+          <div class="result-label">단축시간</div>
+          <div class="result-time" id="minusResult">--:--</div>
+        </div>
+
+        <div class="result-item">
+          <div class="result-label">연장시간</div>
+          <div class="result-time" id="plusResult">--:--</div>
+        </div>
+      </div>
+
+      <button id="resetBtn">리셋</button>
     </div>
-    <div class="sub-text">종료시간에서 요청시간을 차감한 시간</div>
+
+    <div class="sub-text">종료시간 기준 ± 요청시간 계산</div>
   </div>
 </div>
 
