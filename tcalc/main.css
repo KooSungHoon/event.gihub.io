@@ -88,7 +88,7 @@ input.time-input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .result-time-group {
