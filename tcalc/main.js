@@ -93,7 +93,7 @@ $(function () {
 
     if (keyboardHeight > 120 || isInputFocused) {
       const moveHeight = keyboardHeight > 120 ? keyboardHeight : 300;
-      resultBox.style.bottom = (moveHeight + 20) + "px";
+      resultBox.style.bottom = (moveHeight - 40) + "px";
     } else {
       resultBox.style.bottom = "30px";
     }
